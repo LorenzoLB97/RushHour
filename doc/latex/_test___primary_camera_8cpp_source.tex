@@ -1,0 +1,76 @@
+\doxysection{Test\+\_\+\+Primary\+Camera.\+cpp}
+\hypertarget{_test___primary_camera_8cpp_source}{}\label{_test___primary_camera_8cpp_source}\index{tests/Test\_PrimaryCamera.cpp@{tests/Test\_PrimaryCamera.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_primary_camera_8h}{../PrimaryCamera.h}}"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keywordtype}{void}\ testCameraMethods()\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{comment}{//\ Creazione\ della\ camera\ di\ test}}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{class_camera}{Camera}}\ testCamera(\textcolor{stringliteral}{"{}TestCamera"{}});}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{//\ Verifica\ dell'ID,\ del\ tipo\ e\ del\ nome}}
+\DoxyCodeLine{00009\ \ \ \ \ assert(testCamera.getID()\ ==\ 11);}
+\DoxyCodeLine{00010\ \ \ \ \ assert(testCamera.getName()\ ==\ \textcolor{stringliteral}{"{}Camera"{}});}
+\DoxyCodeLine{00011\ \ \ \ \ assert(testCamera.getType()\ ==\ \textcolor{stringliteral}{"{}TestCamera"{}});}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//\ Verifica\ dell'impostazione\ iniziale\ della\ posizione}}
+\DoxyCodeLine{00014\ \ \ \ \ testCamera.setInitialPosition();}
+\DoxyCodeLine{00015\ \ \ \ \ assert(testCamera.getAtX()\ ==\ -\/5.0f);}
+\DoxyCodeLine{00016\ \ \ \ \ assert(testCamera.getAtY()\ ==\ 141.0f);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ Impostazione\ della\ velocità di\ movimento}}
+\DoxyCodeLine{00019\ \ \ \ \ testCamera.setSpeedMovement(2.0f);}
+\DoxyCodeLine{00020\ \ \ \ \ assert(testCamera.getSpeedMovement()\ ==\ 2.0f);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Verifica\ del\ cambio\ della\ camera}}
+\DoxyCodeLine{00023\ \ \ \ \ assert(testCamera.isDynamic());}
+\DoxyCodeLine{00024\ \ \ \ \ testCamera.switchCamera();}
+\DoxyCodeLine{00025\ \ \ \ \ assert(!testCamera.isDynamic());}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ Movimenti\ e\ rotazioni}}
+\DoxyCodeLine{00028\ \ \ \ \ testCamera.moveForward();}
+\DoxyCodeLine{00029\ \ \ \ \ assert(testCamera.getDistance()\ ==\ 148.0f);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ testCamera.moveBackwards();}
+\DoxyCodeLine{00032\ \ \ \ \ assert(testCamera.getDistance()\ ==\ 150.0f);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ testCamera.moveLeft();}
+\DoxyCodeLine{00035\ \ \ \ \ assert(testCamera.getAtX()\ ==\ -\/7.0f);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ testCamera.moveRight();}
+\DoxyCodeLine{00038\ \ \ \ \ assert(testCamera.getAtX()\ ==\ -\/5.0f);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ testCamera.moveUp();}
+\DoxyCodeLine{00041\ \ \ \ \ assert(testCamera.getAtY()\ ==\ 143.0f);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ testCamera.moveDown();}
+\DoxyCodeLine{00044\ \ \ \ \ assert(testCamera.getAtY()\ ==\ 141.0f);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ testCamera.lookUp();}
+\DoxyCodeLine{00047\ \ \ \ \ assert(testCamera.getAngleX()\ >\ 0.0f);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ testCamera.lookDown();}
+\DoxyCodeLine{00050\ \ \ \ \ assert(testCamera.getAngleX()\ ==\ 0.0f);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ testCamera.lookLeft();}
+\DoxyCodeLine{00053\ \ \ \ \ assert(testCamera.getAngleY()\ >\ 0.0f);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ testCamera.lookRight();}
+\DoxyCodeLine{00056\ \ \ \ \ assert(testCamera.getAngleY()\ ==\ 0.0f);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ testCamera.rotateLeft();}
+\DoxyCodeLine{00059\ \ \ \ \ assert(testCamera.getAngleZ()\ >\ 0.0f);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ testCamera.rotateRight();}
+\DoxyCodeLine{00062\ \ \ \ \ assert(testCamera.getAngleZ()\ ==\ 0.0f);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//\ Verifica\ della\ matrice\ di\ proiezione}}
+\DoxyCodeLine{00065\ \ \ \ \ testCamera.setProjectionMatrix(800.0f,\ 600.0f);}
+\DoxyCodeLine{00066\ \ \ \ \ assert(testCamera.getProjectionMatrix()\ !=\ glm::mat4(1.0f));}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ Verifica\ della\ matrice\ inversa}}
+\DoxyCodeLine{00069\ \ \ \ \ assert(testCamera.getCameraInverse()\ !=\ glm::mat4(1.0f));}
+\DoxyCodeLine{00070\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,23 @@
+\doxysection{Test\+\_\+engine.\+cpp}
+\hypertarget{_test__engine_8cpp_source}{}\label{_test__engine_8cpp_source}\index{tests/Test\_engine.cpp@{tests/Test\_engine.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ tests/engine\_test.cpp}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../engine.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keywordtype}{void}\ EngineConstructorTest()\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_engine}{Engine}}\ engine;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{//\ Verifica\ che\ il\ motore\ sia\ inizializzato\ correttamente}}
+\DoxyCodeLine{00011\ \ \ \ \ assert(engine.\mbox{\hyperlink{class_engine_a0b5eee7bf78f64a0d224a9d64f55a210}{getList}}().\mbox{\hyperlink{class_list_a23ffff1bbbff325f774fdd903a0e8544}{size}}()\ ==\ 0);}
+\DoxyCodeLine{00012\ \}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{void}\ testEngineMethods()\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ EngineConstructorTest();}
+\DoxyCodeLine{00017\ \}}
+
+\end{DoxyCode}

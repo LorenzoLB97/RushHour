@@ -1,0 +1,129 @@
+\doxysection{Ovo\+Parser Class Reference}
+\hypertarget{class_ovo_parser}{}\label{class_ovo_parser}\index{OvoParser@{OvoParser}}
+
+
+La classe Ovo\+Loader gestisce il parsing dei file .ovo, estraendo e gestendo i dati della scena 3D.  
+
+
+
+
+{\ttfamily \#include $<$Ovo\+Parser.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ovo_parser_a5dca2baf3270049c7a734a8cacc63f07}{Ovo\+Parser}} (const std\+::filesystem\+::path \&directory)
+\begin{DoxyCompactList}\small\item\em Costruisce un oggetto \doxylink{class_ovo_parser}{Ovo\+Parser} con la directory specificata. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ovo_parser_aa853a40b36d48f5d13c453ea3cb36f71}{parse\+File}} (const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Analizza un file .ovo specifico e costruisce il grafico di scena. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_node}{Node}} $>$ \mbox{\hyperlink{class_ovo_parser_a517e910d5b69e9f6cb100a0712a87d4a}{get\+Root}} ()
+\begin{DoxyCompactList}\small\item\em Ottiene il nodo radice della gerarchia della scena analizzata. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_material}{Material}} $>$ $>$ \mbox{\hyperlink{class_ovo_parser_a9b4980be813afd9cd3cdd6d0ad50aacc}{get\+Materials}} () const
+\begin{DoxyCompactList}\small\item\em Ottiene la collezione di materiali analizzati. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_texture}{Texture}} $>$ $>$ \mbox{\hyperlink{class_ovo_parser_a1f4c0151a7e84cb20016147ecf343ffb}{get\+Textures}} () const
+\begin{DoxyCompactList}\small\item\em Ottiene la collezione di texture analizzate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La classe Ovo\+Loader gestisce il parsing dei file .ovo, estraendo e gestendo i dati della scena 3D. 
+
+La classe Ovo\+Loader si occupa del parsing dei file .ovo, che contengono informazioni sulle scene 3D, inclusi materiali, texture e la struttura gerarchica della scena. Fornisce metodi per il caricamento, l\textquotesingle{}elaborazione e l\textquotesingle{}accesso ai dati analizzati.
+
+\begin{DoxyNote}{Note}
+Attualmente, non tutte le informazioni nel file .ovo vengono analizzate o utilizzate; alcuni dati vengono ignorati e non elaborati.
+\end{DoxyNote}
+La classe include funzionalità per il parsing di materiali, texture, nodi, mesh, mesh con ossatura, ossa e proprietà fisiche. Costruisce una gerarchia di scene rappresentata dalla classe \doxylink{class_node}{Node}, con materiali e texture gestiti tramite puntatori condivisi. La scena analizzata può essere accessa attraverso il nodo radice.
+
+Esempio di utilizzo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{OvoLoader\ loader;}
+\DoxyCodeLine{loader.loadOvoFile(\textcolor{stringliteral}{"{}esempio.ovo"{}});}
+\DoxyCodeLine{std::unique\_ptr<Node>\ radiceScena\ =\ std::move(loader.getRootNode());\ \textcolor{comment}{//\ Nota:\ acquisisce\ la\ proprietà del\ nodo\ radice}}
+
+\end{DoxyCode}
+
+
+\begin{DoxyNote}{Note}
+La classe non è ancora completamente implementata, e alcuni dati potrebbero non essere elaborati nella versione attuale. Aggiornamenti futuri potrebbero estendere la funzionalità per gestire ulteriori caratteristiche presenti nel formato del file .ovo. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ovo_parser_a5dca2baf3270049c7a734a8cacc63f07}\label{class_ovo_parser_a5dca2baf3270049c7a734a8cacc63f07} 
+\index{OvoParser@{OvoParser}!OvoParser@{OvoParser}}
+\index{OvoParser@{OvoParser}!OvoParser@{OvoParser}}
+\doxysubsubsection{\texorpdfstring{OvoParser()}{OvoParser()}}
+{\footnotesize\ttfamily Ovo\+Parser\+::\+Ovo\+Parser (\begin{DoxyParamCaption}\item[{const std\+::filesystem\+::path \&}]{directory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Costruisce un oggetto \doxylink{class_ovo_parser}{Ovo\+Parser} con la directory specificata. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory} & Il percorso alla directory contenente i file OVO. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ovo_parser_a9b4980be813afd9cd3cdd6d0ad50aacc}\label{class_ovo_parser_a9b4980be813afd9cd3cdd6d0ad50aacc} 
+\index{OvoParser@{OvoParser}!getMaterials@{getMaterials}}
+\index{getMaterials@{getMaterials}!OvoParser@{OvoParser}}
+\doxysubsubsection{\texorpdfstring{getMaterials()}{getMaterials()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_material}{Material}} $>$ $>$ Ovo\+Parser\+::get\+Materials (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Ottiene la collezione di materiali analizzati. 
+
+\begin{DoxyReturn}{Returns}
+Vettore (std\+::vector) di std\+::shared\+\_\+ptr a oggetti \doxylink{class_material}{Material}. 
+\end{DoxyReturn}
+\Hypertarget{class_ovo_parser_a517e910d5b69e9f6cb100a0712a87d4a}\label{class_ovo_parser_a517e910d5b69e9f6cb100a0712a87d4a} 
+\index{OvoParser@{OvoParser}!getRoot@{getRoot}}
+\index{getRoot@{getRoot}!OvoParser@{OvoParser}}
+\doxysubsubsection{\texorpdfstring{getRoot()}{getRoot()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_node}{Node}} $>$ Ovo\+Parser\+::get\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ottiene il nodo radice della gerarchia della scena analizzata. 
+
+\begin{DoxyReturn}{Returns}
+Puntatore unico all\textquotesingle{}oggetto \doxylink{class_node}{Node} radice\+: la risorsa deve essere spostata (con std\+::move) se si desidera acquisire la proprietà del std\+::unique\+\_\+ptr. 
+\end{DoxyReturn}
+\Hypertarget{class_ovo_parser_a1f4c0151a7e84cb20016147ecf343ffb}\label{class_ovo_parser_a1f4c0151a7e84cb20016147ecf343ffb} 
+\index{OvoParser@{OvoParser}!getTextures@{getTextures}}
+\index{getTextures@{getTextures}!OvoParser@{OvoParser}}
+\doxysubsubsection{\texorpdfstring{getTextures()}{getTextures()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_texture}{Texture}} $>$ $>$ Ovo\+Parser\+::get\+Textures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Ottiene la collezione di texture analizzate. 
+
+\begin{DoxyReturn}{Returns}
+Vettore (std\+::vector) di std\+::shared\+\_\+ptr a oggetti \doxylink{class_texture}{Texture}. 
+\end{DoxyReturn}
+\Hypertarget{class_ovo_parser_aa853a40b36d48f5d13c453ea3cb36f71}\label{class_ovo_parser_aa853a40b36d48f5d13c453ea3cb36f71} 
+\index{OvoParser@{OvoParser}!parseFile@{parseFile}}
+\index{parseFile@{parseFile}!OvoParser@{OvoParser}}
+\doxysubsubsection{\texorpdfstring{parseFile()}{parseFile()}}
+{\footnotesize\ttfamily void Ovo\+Parser\+::parse\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Analizza un file .ovo specifico e costruisce il grafico di scena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & Il nome del file .ovo da analizzare, cercato nella directory specificata nel costruttore.\\
+\hline
+\end{DoxyParams}
+La funzione analizza prima tutto ciò che non è incluso nel grafico di scena (come i materiali), per poi procedere a costruire la scena del grafo basandosi sulle informazioni trovate. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_ovo_parser_8h}{Ovo\+Parser.\+h}}\item 
+Ovo\+Parser.\+cpp\end{DoxyCompactItemize}

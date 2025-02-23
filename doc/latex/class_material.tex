@@ -1,0 +1,206 @@
+\doxysection{Material Class Reference}
+\hypertarget{class_material}{}\label{class_material}\index{Material@{Material}}
+
+
+Rappresenta un materiale in una scena 3D.  
+
+
+
+
+{\ttfamily \#include $<$Material.\+h$>$}
+
+Inheritance diagram for Material\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_material}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_material_aa4a0939b5a0f5d4c0ef4c7add40487e5}{Material}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Costruttore della classe \doxylink{class_material}{Material}. \end{DoxyCompactList}\item 
+\Hypertarget{class_material_a6059ec72855855b11672ff25962e9336}\label{class_material_a6059ec72855855b11672ff25962e9336} 
+{\bfseries Material} ()=default
+\begin{DoxyCompactList}\small\item\em Costruttore di default della classe \doxylink{class_material}{Material}. \end{DoxyCompactList}\item 
+\Hypertarget{class_material_a2c19452d71f54075df8f5405b03129f4}\label{class_material_a2c19452d71f54075df8f5405b03129f4} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Material} ()
+\begin{DoxyCompactList}\small\item\em Distruttore della classe \doxylink{class_material}{Material}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_material_a1a35cf16c788bedee39fe8a5b8e119a7}{blink\+Emission}} (float blinking)
+\begin{DoxyCompactList}\small\item\em Modifica l\textquotesingle{}emissione del materiale in modo intermittente (effetto lampeggiante). \end{DoxyCompactList}\item 
+\Hypertarget{class_material_ab16ded0d8564e4c6617d8e228ac4d546}\label{class_material_ab16ded0d8564e4c6617d8e228ac4d546} 
+void {\bfseries set\+Emission\+Backup} ()
+\begin{DoxyCompactList}\small\item\em Imposta il backup del colore di emissione del materiale. \end{DoxyCompactList}\item 
+\Hypertarget{class_material_abb44662c74c2b0396bffc0dca48e1eb7}\label{class_material_abb44662c74c2b0396bffc0dca48e1eb7} 
+void {\bfseries reset\+Emission\+From\+Backup} ()
+\begin{DoxyCompactList}\small\item\em Ripristina il colore di emissione del materiale dal backup. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_material_a45758ef82bd5d957edc026af60d47c64}{set\+Texture}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_texture}{Texture}} $>$ \&texture)
+\begin{DoxyCompactList}\small\item\em Imposta la texture associata al materiale. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_material_a5ed3b9faf98095de293832de5fc2fbad}{set\+Material\+Settings}} (const glm\+::vec4 \&emission, float shininess, const glm\+::vec4 \&ambient, const glm\+::vec4 \&diffuse, const glm\+::vec4 \&specular, float alpha)
+\begin{DoxyCompactList}\small\item\em Imposta le impostazioni del materiale. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_material_a664f97432a9025f92c986e13980c04ae}{is\+Texture\+Present}} () const
+\begin{DoxyCompactList}\small\item\em Verifica se una texture è presente. \end{DoxyCompactList}\item 
+\Hypertarget{class_material_a67d4ec48c9949b779dd9f2bfaa7ea38f}\label{class_material_a67d4ec48c9949b779dd9f2bfaa7ea38f} 
+void {\bfseries load\+Material\+Settings} () const
+\begin{DoxyCompactList}\small\item\em Carica le impostazioni del materiale. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_material_settings}{Material\+Settings}} \mbox{\hyperlink{class_material_add2f791c2393b3f37b8b4f2356be3c15}{get\+Material\+Settings}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce le impostazioni del materiale. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_material_aee259a302d72945d10f4115bc58bc713}{rendering}} (const glm\+::mat4 \&inverse\+\_\+camera) const override
+\begin{DoxyCompactList}\small\item\em Funzione di rendering del materiale. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Object} ()=default
+\begin{DoxyCompactList}\small\item\em Costruttore di default della classe \doxylink{class_object}{Object}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_object_ae1598d83884f9d3007025f4ff37465c8}{Object}} (const std\+::string \&type, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Costruttore della classe \doxylink{class_object}{Object}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em Distruttore virtuale della classe \doxylink{class_object}{Object}. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_object_af2846859a33cc01eafefb6b875271761}{get\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce l\textquotesingle{}identificatore univoco dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_object_a7b3e718c4138fd600b6027b793ec4d9e}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce il tipo dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_object_a2ae90a2c240affe58b0ed7d19702847c}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce il nome dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_aa1746b5f7423e25d945f10c52e8c3ca8}{set\+Type}} (const std\+::string \&type)
+\begin{DoxyCompactList}\small\item\em Imposta il tipo dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+glm\+::vec4 \mbox{\hyperlink{class_object_a3fd4d56fc263848df5fad5feb4414682}{generate\+Unique\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Genera un colore univoco basato sull\textquotesingle{}identificatore univoco dell\textquotesingle{}oggetto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+object\+Name} \{\}
+\begin{DoxyCompactList}\small\item\em Nome dell\textquotesingle{}oggetto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Rappresenta un materiale in una scena 3D. 
+
+La classe \doxylink{class_material}{Material} rappresenta un materiale utilizzato per la resa di oggetti in una scena 3D. Deriva dalla classe \doxylink{class_object}{Object} e fornisce funzionalità per la gestione delle impostazioni del materiale e delle texture. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_material_aa4a0939b5a0f5d4c0ef4c7add40487e5}\label{class_material_aa4a0939b5a0f5d4c0ef4c7add40487e5} 
+\index{Material@{Material}!Material@{Material}}
+\index{Material@{Material}!Material@{Material}}
+\doxysubsubsection{\texorpdfstring{Material()}{Material()}}
+{\footnotesize\ttfamily Material\+::\+Material (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Costruttore della classe \doxylink{class_material}{Material}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Il nome del materiale. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_material_a1a35cf16c788bedee39fe8a5b8e119a7}\label{class_material_a1a35cf16c788bedee39fe8a5b8e119a7} 
+\index{Material@{Material}!blinkEmission@{blinkEmission}}
+\index{blinkEmission@{blinkEmission}!Material@{Material}}
+\doxysubsubsection{\texorpdfstring{blinkEmission()}{blinkEmission()}}
+{\footnotesize\ttfamily void Material\+::blink\+Emission (\begin{DoxyParamCaption}\item[{float}]{blinking }\end{DoxyParamCaption})}
+
+
+
+Modifica l\textquotesingle{}emissione del materiale in modo intermittente (effetto lampeggiante). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em blinking} & Il fattore di lampeggiamento. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_material_add2f791c2393b3f37b8b4f2356be3c15}\label{class_material_add2f791c2393b3f37b8b4f2356be3c15} 
+\index{Material@{Material}!getMaterialSettings@{getMaterialSettings}}
+\index{getMaterialSettings@{getMaterialSettings}!Material@{Material}}
+\doxysubsubsection{\texorpdfstring{getMaterialSettings()}{getMaterialSettings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_material_settings}{Material\+Settings}} Material\+::get\+Material\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Restituisce le impostazioni del materiale. 
+
+\begin{DoxyReturn}{Returns}
+Le impostazioni del materiale. 
+\end{DoxyReturn}
+\Hypertarget{class_material_a664f97432a9025f92c986e13980c04ae}\label{class_material_a664f97432a9025f92c986e13980c04ae} 
+\index{Material@{Material}!isTexturePresent@{isTexturePresent}}
+\index{isTexturePresent@{isTexturePresent}!Material@{Material}}
+\doxysubsubsection{\texorpdfstring{isTexturePresent()}{isTexturePresent()}}
+{\footnotesize\ttfamily bool Material\+::is\+Texture\+Present (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Verifica se una texture è presente. 
+
+\begin{DoxyReturn}{Returns}
+True se una texture è presente, False altrimenti. 
+\end{DoxyReturn}
+\Hypertarget{class_material_aee259a302d72945d10f4115bc58bc713}\label{class_material_aee259a302d72945d10f4115bc58bc713} 
+\index{Material@{Material}!rendering@{rendering}}
+\index{rendering@{rendering}!Material@{Material}}
+\doxysubsubsection{\texorpdfstring{rendering()}{rendering()}}
+{\footnotesize\ttfamily void Material\+::rendering (\begin{DoxyParamCaption}\item[{const glm\+::mat4 \&}]{inverse\+\_\+camera }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Funzione di rendering del materiale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inverse\+\_\+camera} & La matrice di vista invertita. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_object_a763575dce0912dad36e498ae585ba702}{Object}}.
+
+\Hypertarget{class_material_a5ed3b9faf98095de293832de5fc2fbad}\label{class_material_a5ed3b9faf98095de293832de5fc2fbad} 
+\index{Material@{Material}!setMaterialSettings@{setMaterialSettings}}
+\index{setMaterialSettings@{setMaterialSettings}!Material@{Material}}
+\doxysubsubsection{\texorpdfstring{setMaterialSettings()}{setMaterialSettings()}}
+{\footnotesize\ttfamily void Material\+::set\+Material\+Settings (\begin{DoxyParamCaption}\item[{const glm\+::vec4 \&}]{emission,  }\item[{float}]{shininess,  }\item[{const glm\+::vec4 \&}]{ambient,  }\item[{const glm\+::vec4 \&}]{diffuse,  }\item[{const glm\+::vec4 \&}]{specular,  }\item[{float}]{alpha }\end{DoxyParamCaption})}
+
+
+
+Imposta le impostazioni del materiale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em emission} & Il colore di emissione. \\
+\hline
+{\em shininess} & La brillantezza del materiale. \\
+\hline
+{\em ambient} & Il colore ambient. \\
+\hline
+{\em diffuse} & Il colore diffuse. \\
+\hline
+{\em specular} & Il colore specular. \\
+\hline
+{\em alpha} & Il valore alpha del materiale. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_material_a45758ef82bd5d957edc026af60d47c64}\label{class_material_a45758ef82bd5d957edc026af60d47c64} 
+\index{Material@{Material}!setTexture@{setTexture}}
+\index{setTexture@{setTexture}!Material@{Material}}
+\doxysubsubsection{\texorpdfstring{setTexture()}{setTexture()}}
+{\footnotesize\ttfamily void Material\+::set\+Texture (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_texture}{Texture}} $>$ \&}]{texture }\end{DoxyParamCaption})}
+
+
+
+Imposta la texture associata al materiale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & La texture da associare. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_material_8h}{Material.\+h}}\item 
+Material.\+cpp\end{DoxyCompactItemize}

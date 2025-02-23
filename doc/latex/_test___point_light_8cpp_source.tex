@@ -1,0 +1,35 @@
+\doxysection{Test\+\_\+\+Point\+Light.\+cpp}
+\hypertarget{_test___point_light_8cpp_source}{}\label{_test___point_light_8cpp_source}\index{tests/Test\_PointLight.cpp@{tests/Test\_PointLight.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_point_light_8h}{../PointLight.h}}"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keywordtype}{void}\ testPointLightMethods()\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{comment}{//\ Creazione\ della\ luce\ puntiforme\ di\ test}}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{class_point_light}{PointLight}}\ pointLight(\textcolor{stringliteral}{"{}TestPointLight"{}});}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{//\ Verifica\ dell'ID,\ del\ tipo\ e\ del\ nome}}
+\DoxyCodeLine{00009\ \ \ \ \ assert(pointLight.getID()\ ==\ 10);}
+\DoxyCodeLine{00010\ \ \ \ \ assert(pointLight.getType()\ ==\ \textcolor{stringliteral}{"{}PointLight"{}});}
+\DoxyCodeLine{00011\ \ \ \ \ assert(pointLight.getName()\ ==\ \textcolor{stringliteral}{"{}TestPointLight"{}});}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//\ Verifica\ del\ numero\ di\ luce}}
+\DoxyCodeLine{00014\ \ \ \ \ assert(pointLight.getLightNumber()\ ==\ 0);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Verifica\ delle\ impostazioni\ della\ luce}}
+\DoxyCodeLine{00017\ \ \ \ \ pointLight.setLightAmbient(glm::vec4(0.2f,\ 0.2f,\ 0.2f,\ 1.0f));}
+\DoxyCodeLine{00018\ \ \ \ \ pointLight.setLightDiffuse(glm::vec4(0.8f,\ 0.8f,\ 0.8f,\ 1.0f));}
+\DoxyCodeLine{00019\ \ \ \ \ pointLight.setLightSpecular(glm::vec4(1.0f,\ 1.0f,\ 1.0f,\ 1.0f));}
+\DoxyCodeLine{00020\ \ \ \ \ pointLight.setColor(glm::vec3(1.0f,\ 0.0f,\ 0.0f));}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Verifica\ della\ posizione\ della\ luce\ puntiforme}}
+\DoxyCodeLine{00023\ \ \ \ \ pointLight.setPosition(glm::vec3(10.0f,\ 5.0f,\ 3.0f));}
+\DoxyCodeLine{00024\ \ \ \ \ glm::vec3\ position\ =\ pointLight.getPosition();}
+\DoxyCodeLine{00025\ \ \ \ \ assert(position.x\ ==\ 10.0f);}
+\DoxyCodeLine{00026\ \ \ \ \ assert(position.y\ ==\ 5.0f);}
+\DoxyCodeLine{00027\ \ \ \ \ assert(position.z\ ==\ 3.0f);}
+\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00029\ }
+
+\end{DoxyCode}

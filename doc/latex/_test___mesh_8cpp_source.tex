@@ -1,0 +1,31 @@
+\doxysection{Test\+\_\+\+Mesh.\+cpp}
+\hypertarget{_test___mesh_8cpp_source}{}\label{_test___mesh_8cpp_source}\index{tests/Test\_Mesh.cpp@{tests/Test\_Mesh.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ tests/Mesh\_test.cpp}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_mesh_8h}{../Mesh.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_material_8h}{../Material.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keywordtype}{void}\ MeshConstructorTest()\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{class_mesh}{Mesh}}\ mesh(\textcolor{stringliteral}{"{}test\_mesh"{}});}
+\DoxyCodeLine{00010\ \ \ \ \ assert(mesh.getName()\ ==\ \textcolor{stringliteral}{"{}test\_mesh"{}});}
+\DoxyCodeLine{00011\ \ \ \ \ assert(mesh.getMaterial()\ ==\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00012\ \}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{void}\ MeshMaterialTest()\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ std::shared\_ptr<Material>\ material\ =\ std::make\_shared<Material>(\textcolor{stringliteral}{"{}test\_material"{}});}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_mesh}{Mesh}}\ mesh(\textcolor{stringliteral}{"{}test\_mesh"{}});}
+\DoxyCodeLine{00017\ \ \ \ \ mesh.setMaterial(material);}
+\DoxyCodeLine{00018\ \ \ \ \ assert(mesh.getMaterial()\ ==\ material.get());}
+\DoxyCodeLine{00019\ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ testMeshMethods()\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Esegui\ tutti\ i\ test}}
+\DoxyCodeLine{00023\ \ \ \ \ MeshConstructorTest();}
+\DoxyCodeLine{00024\ \ \ \ \ MeshMaterialTest();}
+\DoxyCodeLine{00025\ \}}
+
+\end{DoxyCode}

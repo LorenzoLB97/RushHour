@@ -1,0 +1,66 @@
+\doxysection{Test\+\_\+\+List.\+cpp}
+\hypertarget{_test___list_8cpp_source}{}\label{_test___list_8cpp_source}\index{tests/Test\_List.cpp@{tests/Test\_List.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_list_8h}{../List.h}}"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}../DirectionalLight.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_point_light_8h}{../PointLight.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keywordtype}{void}\ testListMethods()\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//\ Creazione\ di\ alcuni\ oggetti\ di\ test}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ Node\ root("{}Root"{},\ "{}RootNode"{});}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ Node\ child1("{}Child"{},\ "{}ChildNode1"{});}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ Node\ child2("{}Child"{},\ "{}ChildNode1"{});}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ DirectionalLight\ directionalLight("{}DirectionalLight1"{});}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ \ \ PointLight\ pointLight("{}PointLight2"{});}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ Node*\ root\ =\ new\ Node("{}Root"{},\ "{}RootNode"{});}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ Node*\ child1\ =\ new\ Node("{}Child"{},\ "{}ChildNode1"{});}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ Node*\ child2\ =\ new\ Node("{}Child"{},\ "{}ChildNode2"{});}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ Node*\ directionalLight\ =\ new\ DirectionalLight("{}DirectionalLight1"{});}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ \ \ Node*\ pointLight\ =\ new\ PointLight("{}PointLight2"{});}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ //\ Creazione\ dell'oggetto\ List\ di\ test}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ \ \ List\ nodeList;}}
+\DoxyCodeLine{00027\ \textcolor{comment}{}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ //\ Aggiunta\ dei\ nodi\ alla\ lista}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ \ \ nodeList.addNode(\&root);}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ nodeList.addNode(\&child1);}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ nodeList.addNode(\&child2);}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ \ \ \ nodeList.addNode(\&directionalLight);}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ nodeList.addNode(\&pointLight);}}
+\DoxyCodeLine{00034\ \textcolor{comment}{}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ \ std::cout\ <<\ "{}nodeList.size()\ "{}\ <<\ nodeList.size()\ <<\ std::endl;}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ //\ Verifica\ della\ dimensione\ della\ lista}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ assert(nodeList.size()\ ==\ 5);\ \ \ //\ come\ mai\ da\ 0?}}
+\DoxyCodeLine{00038\ \textcolor{comment}{}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ //\ questo\ fallisce\ di\ conseguenza}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ std::cout\ <<\ "{}nodeList.findById(child1-\/>getID())\ "{}\ <<\ nodeList.findById(child1.getID())\ <<\ std::endl;}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ \ \ \ //\ Verifica\ della\ ricerca\ di\ un\ nodo\ per\ ID}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ \ //assert(nodeList.findById(child1.getID())\ ==\ child1);}}
+\DoxyCodeLine{00043\ \textcolor{comment}{}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ \ \ \ //\ Pulizia\ della\ lista}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ \ \ \ nodeList.clear();}}
+\DoxyCodeLine{00046\ \textcolor{comment}{}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ \ \ \ std::cout\ <<\ "{}nodeList.size()\ "{}\ <<\ nodeList.size()\ <<\ std::endl;}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ //\ Verifica\ della\ dimensione\ dopo\ la\ pulizia}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ assert(nodeList.size()\ ==\ 0);}}
+\DoxyCodeLine{00050\ \textcolor{comment}{}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ \ //\ Deallocazione\ della\ memoria\ per\ gli\ oggetti\ di\ test}}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ \ \ \ /*}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ \ \ \ delete\ root;}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ \ \ \ delete\ child1;}}
+\DoxyCodeLine{00055\ \textcolor{comment}{\ \ \ \ delete\ child2;}}
+\DoxyCodeLine{00056\ \textcolor{comment}{\ \ \ \ delete\ light1;}}
+\DoxyCodeLine{00057\ \textcolor{comment}{\ \ \ \ delete\ light2;}}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00059\ \}}
+\DoxyCodeLine{00060\ }
+
+\end{DoxyCode}

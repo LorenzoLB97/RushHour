@@ -1,0 +1,21 @@
+\doxysection{Test\+\_\+\+Light.\+cpp}
+\hypertarget{_test___light_8cpp_source}{}\label{_test___light_8cpp_source}\index{tests/Test\_Light.cpp@{tests/Test\_Light.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_light_8h}{../Light.h}}"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keywordtype}{void}\ testLightMethods()\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{comment}{//\ Creazione\ della\ luce\ di\ test}}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{class_light}{Light}}\ testLight(\textcolor{stringliteral}{"{}PointLight"{}},\ \textcolor{stringliteral}{"{}TestLight"{}});}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{//\ Verifica\ dell'ID,\ del\ tipo\ e\ del\ nome}}
+\DoxyCodeLine{00009\ \ \ \ \ assert(testLight.getID()\ ==\ 2);}
+\DoxyCodeLine{00010\ \ \ \ \ assert(testLight.getType()\ ==\ \textcolor{stringliteral}{"{}PointLight"{}});}
+\DoxyCodeLine{00011\ \ \ \ \ assert(testLight.getName()\ ==\ \textcolor{stringliteral}{"{}TestLight"{}});}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//\ Verifica\ del\ numero\ di\ luce}}
+\DoxyCodeLine{00014\ \ \ \ \ assert(testLight.getLightNumber()\ ==\ 0);}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,65 @@
+\doxysection{Material.\+h}
+\hypertarget{_material_8h_source}{}\label{_material_8h_source}\mbox{\hyperlink{_material_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ MATERIAL\_HEADER}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MATERIAL\_HEADER\ }}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_engine_export_8h}{EngineExport.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_object_8h}{Object.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}Texture.h"{}}\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <memory>}\ \textcolor{comment}{//shared\_ptr}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <glm/glm.hpp>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <glm/gtc/matrix\_transform.hpp>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <glm/gtc/type\_ptr.hpp>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <glm/fwd.hpp>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{_engine_export_8h_a77278c8cc96e39fb27b5d0a347c8fb3d}{LIB\_API}}\ \mbox{\hyperlink{struct_material_settings}{MaterialSettings}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ glm::vec4\ emission\ =\ glm::vec4(0.0f);\ }
+\DoxyCodeLine{00032\ \ \ \ \ glm::vec4\ emissionBackup\ =\ glm::vec4(0.0f);\ }
+\DoxyCodeLine{00033\ \ \ \ \ glm::vec4\ ambient\ =\ glm::vec4(0.0f);\ }
+\DoxyCodeLine{00034\ \ \ \ \ glm::vec4\ diffuse\ =\ glm::vec4(0.0f);\ }
+\DoxyCodeLine{00035\ \ \ \ \ glm::vec4\ specular\ =\ glm::vec4(0.0f);\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{float}\ shininess\ =\ 0.0f;\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{float}\ alpha\ =\ 1.0f;\ }
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{class\ }\mbox{\hyperlink{_engine_export_8h_a77278c8cc96e39fb27b5d0a347c8fb3d}{LIB\_API}}\ \mbox{\hyperlink{class_material}{Material}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_object}{Object}}\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{struct_material_settings}{MaterialSettings}}\ m\_materialSettings\{\};\ }
+\DoxyCodeLine{00050\ \ \ \ \ std::shared\_ptr<Texture>\ m\_texture\{\};\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_material}{Material}}(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_material_a6059ec72855855b11672ff25962e9336}{Material}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_material_a2c19452d71f54075df8f5405b03129f4}{\string~Material}}()\ \{\}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ blinkEmission(\textcolor{keywordtype}{float}\ blinking);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ setEmissionBackup();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ resetEmissionFromBackup();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ setTexture(\textcolor{keyword}{const}\ std::shared\_ptr<Texture>\&\ texture);}
+\DoxyCodeLine{00091\ \ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ setMaterialSettings(\textcolor{keyword}{const}\ glm::vec4\&\ emission,\ \textcolor{keywordtype}{float}\ shininess,\ \textcolor{keyword}{const}\ glm::vec4\&\ ambient,\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec4\&\ diffuse,\ \textcolor{keyword}{const}\ glm::vec4\&\ specular,\ \textcolor{keywordtype}{float}\ alpha);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{bool}\ isTexturePresent()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ loadMaterialSettings()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00119\ \ \ \ \ \mbox{\hyperlink{struct_material_settings}{MaterialSettings}}\ getMaterialSettings()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ rendering(\textcolor{keyword}{const}\ glm::mat4\&\ inverse\_camera)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00126\ \};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

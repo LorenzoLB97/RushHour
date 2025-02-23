@@ -1,0 +1,118 @@
+\doxysection{Mesh\+Movement\+Manager Class Reference}
+\hypertarget{class_mesh_movement_manager}{}\label{class_mesh_movement_manager}\index{MeshMovementManager@{MeshMovementManager}}
+
+
+Gestisce il movimento di una \doxylink{class_mesh}{Mesh} selezionata.  
+
+
+
+
+{\ttfamily \#include $<$Mesh\+Movement\+Manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_mesh_movement_manager_a42b9559863b70f4bb891067515baf094}{set\+Active\+Mesh}} (\mbox{\hyperlink{class_mesh}{Mesh}} \texorpdfstring{$\ast$}{*}mesh)
+\begin{DoxyCompactList}\small\item\em Imposta la mesh attiva. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_movement_manager_a4b42ad5932f129d003ef8af63781c6fb}{set\+Movement}} (float limit, float speed=1.\+0f)
+\begin{DoxyCompactList}\small\item\em Imposta il movimento per la mesh attiva. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_mesh_movement_manager_a45b076b9984a35437cdbd5ae62641621}{is\+Moving}} ()
+\begin{DoxyCompactList}\small\item\em Verifica se la mesh attiva è in movimento. \end{DoxyCompactList}\item 
+\Hypertarget{class_mesh_movement_manager_a883bdcea2bcee22be116d89b1326f8fd}\label{class_mesh_movement_manager_a883bdcea2bcee22be116d89b1326f8fd} 
+void {\bfseries blink} ()
+\begin{DoxyCompactList}\small\item\em Esegue l\textquotesingle{}effetto di lampeggiamento sulla mesh attiva. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_mesh_movement_manager_a270c5652cb53be70d31a95b6e18b84ce}{get\+Limit}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce il limite di movimento per la mesh attiva. \end{DoxyCompactList}\item 
+\Hypertarget{class_mesh_movement_manager_a47cbfd683f6d6613ceba8db216fcdc5d}\label{class_mesh_movement_manager_a47cbfd683f6d6613ceba8db216fcdc5d} 
+void {\bfseries reset} ()
+\begin{DoxyCompactList}\small\item\em Reimposta lo stato del \doxylink{class_mesh_movement_manager}{Mesh\+Movement\+Manager}. \end{DoxyCompactList}\item 
+\Hypertarget{class_mesh_movement_manager_af734119943165df3c9e8dd21074f16a7}\label{class_mesh_movement_manager_af734119943165df3c9e8dd21074f16a7} 
+void {\bfseries move\+Active\+Mesh} ()
+\begin{DoxyCompactList}\small\item\em Muove la mesh attiva durante la chiamata di display callback. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mesh}{Mesh}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_mesh_movement_manager_a78c559ed6784875d6e97917184362002}{get\+Active\+Mesh}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce la mesh attiva. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gestisce il movimento di una \doxylink{class_mesh}{Mesh} selezionata. 
+
+La classe \doxylink{class_mesh_movement_manager}{Mesh\+Movement\+Manager} gestisce il movimento della \doxylink{class_mesh}{Mesh} attiva (selezionata), includendo blinking, velocità e altre configurazioni. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mesh_movement_manager_a78c559ed6784875d6e97917184362002}\label{class_mesh_movement_manager_a78c559ed6784875d6e97917184362002} 
+\index{MeshMovementManager@{MeshMovementManager}!getActiveMesh@{getActiveMesh}}
+\index{getActiveMesh@{getActiveMesh}!MeshMovementManager@{MeshMovementManager}}
+\doxysubsubsection{\texorpdfstring{getActiveMesh()}{getActiveMesh()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mesh}{Mesh}} \texorpdfstring{$\ast$}{*} Mesh\+Movement\+Manager\+::get\+Active\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restituisce la mesh attiva. 
+
+\begin{DoxyReturn}{Returns}
+La mesh attiva. 
+\end{DoxyReturn}
+\Hypertarget{class_mesh_movement_manager_a270c5652cb53be70d31a95b6e18b84ce}\label{class_mesh_movement_manager_a270c5652cb53be70d31a95b6e18b84ce} 
+\index{MeshMovementManager@{MeshMovementManager}!getLimit@{getLimit}}
+\index{getLimit@{getLimit}!MeshMovementManager@{MeshMovementManager}}
+\doxysubsubsection{\texorpdfstring{getLimit()}{getLimit()}}
+{\footnotesize\ttfamily float Mesh\+Movement\+Manager\+::get\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restituisce il limite di movimento per la mesh attiva. 
+
+\begin{DoxyReturn}{Returns}
+Il limite di movimento. 
+\end{DoxyReturn}
+\Hypertarget{class_mesh_movement_manager_a45b076b9984a35437cdbd5ae62641621}\label{class_mesh_movement_manager_a45b076b9984a35437cdbd5ae62641621} 
+\index{MeshMovementManager@{MeshMovementManager}!isMoving@{isMoving}}
+\index{isMoving@{isMoving}!MeshMovementManager@{MeshMovementManager}}
+\doxysubsubsection{\texorpdfstring{isMoving()}{isMoving()}}
+{\footnotesize\ttfamily bool Mesh\+Movement\+Manager\+::is\+Moving (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Verifica se la mesh attiva è in movimento. 
+
+\begin{DoxyReturn}{Returns}
+True se la mesh attiva è in movimento, False altrimenti. 
+\end{DoxyReturn}
+\Hypertarget{class_mesh_movement_manager_a42b9559863b70f4bb891067515baf094}\label{class_mesh_movement_manager_a42b9559863b70f4bb891067515baf094} 
+\index{MeshMovementManager@{MeshMovementManager}!setActiveMesh@{setActiveMesh}}
+\index{setActiveMesh@{setActiveMesh}!MeshMovementManager@{MeshMovementManager}}
+\doxysubsubsection{\texorpdfstring{setActiveMesh()}{setActiveMesh()}}
+{\footnotesize\ttfamily void Mesh\+Movement\+Manager\+::set\+Active\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mesh}{Mesh}} \texorpdfstring{$\ast$}{*}}]{mesh }\end{DoxyParamCaption})}
+
+
+
+Imposta la mesh attiva. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & La mesh da impostare come attiva. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mesh_movement_manager_a4b42ad5932f129d003ef8af63781c6fb}\label{class_mesh_movement_manager_a4b42ad5932f129d003ef8af63781c6fb} 
+\index{MeshMovementManager@{MeshMovementManager}!setMovement@{setMovement}}
+\index{setMovement@{setMovement}!MeshMovementManager@{MeshMovementManager}}
+\doxysubsubsection{\texorpdfstring{setMovement()}{setMovement()}}
+{\footnotesize\ttfamily void Mesh\+Movement\+Manager\+::set\+Movement (\begin{DoxyParamCaption}\item[{float}]{limit,  }\item[{float}]{speed = {\ttfamily 1.0f} }\end{DoxyParamCaption})}
+
+
+
+Imposta il movimento per la mesh attiva. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em limit} & Il limite di movimento. \\
+\hline
+{\em speed} & La velocità di movimento. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_mesh_movement_manager_8h}{Mesh\+Movement\+Manager.\+h}}\item 
+Mesh\+Movement\+Manager.\+cpp\end{DoxyCompactItemize}

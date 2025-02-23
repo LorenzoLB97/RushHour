@@ -1,0 +1,101 @@
+\doxysection{engine.\+h}
+\hypertarget{engine_8h_source}{}\label{engine_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ENGINE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ENGINE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_ovo_parser_8h}{OvoParser.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_list_8h}{List.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_material_8h}{Material.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Texture.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <memory>}\ \textcolor{comment}{//\ shared\_ptr}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_primary_camera_8h}{PrimaryCamera.h}}"{}}\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ LIB\_NAME\ \ \ \ \ \ "{}Dynamic\ Library\ v.1"{}\ }}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ LIB\_VERSION\ \ \ 10\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_engine_export_8h}{EngineExport.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_mesh_movement_manager_8h}{MeshMovementManager.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{_engine_export_8h_a77278c8cc96e39fb27b5d0a347c8fb3d}{LIB\_API}}\ \mbox{\hyperlink{class_engine}{Engine}}\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_height;}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_list}{List}}\ m\_list;}
+\DoxyCodeLine{00030\ \ \ \ \ std::unique\_ptr<Node>\ m\_root\{\};\ \textcolor{comment}{//\ Engine\ owns\ the\ root}}
+\DoxyCodeLine{00031\ \ \ \ \ std::vector<std::shared\_ptr<Material>>\ m\_materials\{\};\ \textcolor{comment}{//\ And\ holds\ all\ the\ materials,\ even\ if\ no\ mesh\ exists}}
+\DoxyCodeLine{00032\ \ \ \ \ std::vector<std::shared\_ptr<Texture>>\ m\_textures\{\};\ \textcolor{comment}{//\ And\ holds\ all\ the\ textures,\ even\ if\ no\ material\ exists}}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_mesh_movement_manager}{MeshMovementManager}}\ m\_meshManager\{\};}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_camera}{Camera}}\ m\_camera\{\textcolor{stringliteral}{"{}Camera01"{}}\ \};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_isRunning\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_engine_acc713c22e0940be92b1251a916849077}{Engine}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_engine}{Engine}}\&\ getInstance();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ init(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}**\ argv,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ windowTitle,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00059\ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ load(\textcolor{keyword}{const}\ std::string\&\ fileDirectory,\ \textcolor{keyword}{const}\ std::string\&\ fileName);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ setBackgroundColor(\textcolor{keywordtype}{float}\ r,\ \textcolor{keywordtype}{float}\ g,\ \textcolor{keywordtype}{float}\ b);}
+\DoxyCodeLine{00074\ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ displayCallback();}
+\DoxyCodeLine{00079\ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ reshapeCallback();}
+\DoxyCodeLine{00084\ \ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ specialCallback(\textcolor{keywordtype}{void}(*fnct)(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00090\ \ \ \ \ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ keyboardCallback(\textcolor{keywordtype}{void}(*fnct)(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char},\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00096\ \ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ mouseCallback(\textcolor{keywordtype}{void}(*fnct)(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00102\ \ \ \ \ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{bool}\ isRunning();}
+\DoxyCodeLine{00108\ \ \ \ \ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ free();}
+\DoxyCodeLine{00113\ \ \ \ \ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ stop();}
+\DoxyCodeLine{00118\ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ callGlutEvent();}
+\DoxyCodeLine{00123\ \ \ \ \ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ timerCallback();}
+\DoxyCodeLine{00128\ \ \ \ \ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ glutMainLoop();}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ setTexturePath(\textcolor{keyword}{const}\ std::string\&\ path);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00144\ \ \ \ \ \mbox{\hyperlink{class_list}{List}}\&\ getList();}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{int}\ getHeight();}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ setHeight(\textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00162\ \ \ \ \ \mbox{\hyperlink{class_camera}{Camera}}\&\ \mbox{\hyperlink{class_engine_a4e64338ed83b006fb4914a0d50bd64e0}{getCamera}}()\ \{\ \textcolor{keywordflow}{return}\ m\_camera;\ \}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00168\ \ \ \ \ \mbox{\hyperlink{class_mesh_movement_manager}{MeshMovementManager}}\&\ \mbox{\hyperlink{class_engine_a4887b0e6746bec16eb6b290e5a9c5a6f}{getMeshManager}}()\ \{\ \textcolor{keywordflow}{return}\ m\_meshManager;\ \}}
+\DoxyCodeLine{00169\ \ \ \ \ }
+\DoxyCodeLine{00176\ \ \ \ \ \mbox{\hyperlink{class_node}{Node}}*\ getNodeOnClick(\textcolor{keywordtype}{int}\ mouseX,\ \textcolor{keywordtype}{int}\ mouseY)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{void}\ switchGameEnd(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{00183\ \};}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00191\ \textcolor{keywordtype}{void}\ methodReshapeCallback(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00196\ \textcolor{keywordtype}{void}\ methodDisplayCallback();}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00204\ \textcolor{keywordtype}{void}\ methodSpecialCallback(\textcolor{keywordtype}{int}\ key,\ \textcolor{keywordtype}{int}\ mouseX,\ \textcolor{keywordtype}{int}\ mouseY);}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00210\ \textcolor{keywordtype}{void}\ methodTimerCallback(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00218\ \textcolor{keywordtype}{void}\ methodKeyboardCallback(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ key,\ \textcolor{keywordtype}{int}\ mouseX,\ \textcolor{keywordtype}{int}\ mouseY);}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00227\ \textcolor{keywordtype}{void}\ methodMouseCallback(\textcolor{keywordtype}{int}\ button,\ \textcolor{keywordtype}{int}\ state,\ \textcolor{keywordtype}{int}\ mouseX,\ \textcolor{keywordtype}{int}\ mouseY);}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

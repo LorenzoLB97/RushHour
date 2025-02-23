@@ -1,0 +1,334 @@
+\doxysection{Engine Class Reference}
+\hypertarget{class_engine}{}\label{class_engine}\index{Engine@{Engine}}
+
+
+Rappresenta il motore grafico 3D.  
+
+
+
+
+{\ttfamily \#include $<$engine.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_engine_acc713c22e0940be92b1251a916849077}\label{class_engine_acc713c22e0940be92b1251a916849077} 
+{\bfseries Engine} ()=default
+\begin{DoxyCompactList}\small\item\em Costruttore di default per la classe \doxylink{class_engine}{Engine}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_a18f0314fa1ac31c8d487624a892d2f60}{init}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv, const char \texorpdfstring{$\ast$}{*}window\+Title, int width, int height)
+\begin{DoxyCompactList}\small\item\em Inizializza il motore grafico. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_a2be22f334c1ed90e0ef2b6d43481b142}{load}} (const std\+::string \&file\+Directory, const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Carica un file di scena. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_a9cab11459216b63f62ba2200c603373f}{set\+Background\+Color}} (float r, float g, float b)
+\begin{DoxyCompactList}\small\item\em Imposta il colore di sfondo della finestra. \end{DoxyCompactList}\item 
+\Hypertarget{class_engine_a3ce01d38a6fd082f9e9799281a759f09}\label{class_engine_a3ce01d38a6fd082f9e9799281a759f09} 
+void {\bfseries display\+Callback} ()
+\begin{DoxyCompactList}\small\item\em Funzione di callback per la visualizzazione. \end{DoxyCompactList}\item 
+\Hypertarget{class_engine_a34100b5b8eba49649cfe04c583852606}\label{class_engine_a34100b5b8eba49649cfe04c583852606} 
+void {\bfseries reshape\+Callback} ()
+\begin{DoxyCompactList}\small\item\em Funzione di callback per il ridimensionamento della finestra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_a10f4d68efd77f4201e2047c443f2af06}{special\+Callback}} (void(\texorpdfstring{$\ast$}{*}fnct)(int, int, int))
+\begin{DoxyCompactList}\small\item\em Funzione di callback per tasti speciali. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_aff7a8cf9c49c04274457c37ad6b12d62}{keyboard\+Callback}} (void(\texorpdfstring{$\ast$}{*}fnct)(unsigned char, int, int))
+\begin{DoxyCompactList}\small\item\em Funzione di callback per la tastiera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_affaa29baf3b5b235ddf7669db70c7fc6}{mouse\+Callback}} (void(\texorpdfstring{$\ast$}{*}fnct)(int, int, int, int))
+\begin{DoxyCompactList}\small\item\em Funzione di callback per il mouse. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_engine_a0b99e6008605c0d0f27a1829074aaf07}{is\+Running}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce lo stato di esecuzione del motore. \end{DoxyCompactList}\item 
+\Hypertarget{class_engine_acd825572a9c282c50fe0b6e80b441ec5}\label{class_engine_acd825572a9c282c50fe0b6e80b441ec5} 
+void {\bfseries free} ()
+\begin{DoxyCompactList}\small\item\em Rilascia le risorse allocate dal motore. \end{DoxyCompactList}\item 
+\Hypertarget{class_engine_ac88ada17b33bc5ddaf6bb73e0cdc67f3}\label{class_engine_ac88ada17b33bc5ddaf6bb73e0cdc67f3} 
+void {\bfseries stop} ()
+\begin{DoxyCompactList}\small\item\em Interrompe l\textquotesingle{}esecuzione del motore. \end{DoxyCompactList}\item 
+\Hypertarget{class_engine_ab22b69449cd81a5a92d7b9db288bd445}\label{class_engine_ab22b69449cd81a5a92d7b9db288bd445} 
+void {\bfseries call\+Glut\+Event} ()
+\begin{DoxyCompactList}\small\item\em Chiama gli eventi di glut. \end{DoxyCompactList}\item 
+\Hypertarget{class_engine_a8c9026ad991cc951cc8a0b1ff6495221}\label{class_engine_a8c9026ad991cc951cc8a0b1ff6495221} 
+void {\bfseries timer\+Callback} ()
+\begin{DoxyCompactList}\small\item\em Funzione di callback per il timer. \end{DoxyCompactList}\item 
+\Hypertarget{class_engine_ae13df05e946abf349ea7d61f83eb1779}\label{class_engine_ae13df05e946abf349ea7d61f83eb1779} 
+void {\bfseries glut\+Main\+Loop} ()
+\begin{DoxyCompactList}\small\item\em Funzione di callback per il loop principale di glut. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_a26bf5a0a7dcc3a0f940069f4a870951b}{set\+Texture\+Path}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Imposta il percorso delle texture. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_list}{List}} \& \mbox{\hyperlink{class_engine_a0b5eee7bf78f64a0d224a9d64f55a210}{get\+List}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce la lista di oggetti del motore. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_engine_a7ae96eadc6cdc535f241f9807bdd9d87}{get\+Height}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce l\textquotesingle{}altezza della finestra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_a61a864a1e8ee2fcb76f503571b92f47e}{set\+Height}} (int height)
+\begin{DoxyCompactList}\small\item\em Imposta l\textquotesingle{}altezza della finestra. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera}{Camera}} \& \mbox{\hyperlink{class_engine_a4e64338ed83b006fb4914a0d50bd64e0}{get\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce la fotocamera del motore. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mesh_movement_manager}{Mesh\+Movement\+Manager}} \& \mbox{\hyperlink{class_engine_a4887b0e6746bec16eb6b290e5a9c5a6f}{get\+Mesh\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce il gestore di mesh del motore. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine_a70bcaf7abc01debdecba41663d0bde93}{get\+Node\+On\+Click}} (int mouseX, int mouseY) const
+\begin{DoxyCompactList}\small\item\em Restituisce il nodo cliccato sulla finestra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_a3b51d1adf076b087d69d964896c594cc}{switch\+Game\+End}} (bool)
+\begin{DoxyCompactList}\small\item\em Attiva o disattiva la fine del gioco. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_engine}{Engine}} \& \mbox{\hyperlink{class_engine_a4fbdd2df29e30dd08de3c285cee8c128}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce un\textquotesingle{}istanza singleton del motore. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Rappresenta il motore grafico 3D. 
+
+La classe \doxylink{class_engine}{Engine} rappresenta un motore grafico 3D che gestisce la visualizzazione e la manipolazione di oggetti 3D in una scena virtuale. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_engine_a4e64338ed83b006fb4914a0d50bd64e0}\label{class_engine_a4e64338ed83b006fb4914a0d50bd64e0} 
+\index{Engine@{Engine}!getCamera@{getCamera}}
+\index{getCamera@{getCamera}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{getCamera()}{getCamera()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera}{Camera}} \& Engine\+::get\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Restituisce la fotocamera del motore. 
+
+\begin{DoxyReturn}{Returns}
+Una referenza alla fotocamera del motore. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_a7ae96eadc6cdc535f241f9807bdd9d87}\label{class_engine_a7ae96eadc6cdc535f241f9807bdd9d87} 
+\index{Engine@{Engine}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily int Engine\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restituisce l\textquotesingle{}altezza della finestra. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}altezza della finestra. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_a4fbdd2df29e30dd08de3c285cee8c128}\label{class_engine_a4fbdd2df29e30dd08de3c285cee8c128} 
+\index{Engine@{Engine}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_engine}{Engine}} \& Engine\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Restituisce un\textquotesingle{}istanza singleton del motore. 
+
+\begin{DoxyReturn}{Returns}
+Un riferimento all\textquotesingle{}istanza singleton del motore. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_a0b5eee7bf78f64a0d224a9d64f55a210}\label{class_engine_a0b5eee7bf78f64a0d224a9d64f55a210} 
+\index{Engine@{Engine}!getList@{getList}}
+\index{getList@{getList}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{getList()}{getList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_list}{List}} \& Engine\+::get\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restituisce la lista di oggetti del motore. 
+
+\begin{DoxyReturn}{Returns}
+Una referenza alla lista di oggetti del motore. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_a4887b0e6746bec16eb6b290e5a9c5a6f}\label{class_engine_a4887b0e6746bec16eb6b290e5a9c5a6f} 
+\index{Engine@{Engine}!getMeshManager@{getMeshManager}}
+\index{getMeshManager@{getMeshManager}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{getMeshManager()}{getMeshManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mesh_movement_manager}{Mesh\+Movement\+Manager}} \& Engine\+::get\+Mesh\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Restituisce il gestore di mesh del motore. 
+
+\begin{DoxyReturn}{Returns}
+Una referenza al gestore di mesh del motore. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_a70bcaf7abc01debdecba41663d0bde93}\label{class_engine_a70bcaf7abc01debdecba41663d0bde93} 
+\index{Engine@{Engine}!getNodeOnClick@{getNodeOnClick}}
+\index{getNodeOnClick@{getNodeOnClick}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{getNodeOnClick()}{getNodeOnClick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} Engine\+::get\+Node\+On\+Click (\begin{DoxyParamCaption}\item[{int}]{mouseX,  }\item[{int}]{mouseY }\end{DoxyParamCaption}) const}
+
+
+
+Restituisce il nodo cliccato sulla finestra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mouseX} & La coordinata X del mouse. \\
+\hline
+{\em mouseY} & La coordinata Y del mouse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un puntatore al nodo cliccato sulla finestra. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_a18f0314fa1ac31c8d487624a892d2f60}\label{class_engine_a18f0314fa1ac31c8d487624a892d2f60} 
+\index{Engine@{Engine}!init@{init}}
+\index{init@{init}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Engine\+::init (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{window\+Title,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Inizializza il motore grafico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Numero di argomenti della riga di comando. \\
+\hline
+{\em argv} & Array di argomenti della riga di comando. \\
+\hline
+{\em window\+Title} & Titolo della finestra di visualizzazione. \\
+\hline
+{\em width} & Larghezza della finestra. \\
+\hline
+{\em height} & Altezza della finestra. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_engine_a0b99e6008605c0d0f27a1829074aaf07}\label{class_engine_a0b99e6008605c0d0f27a1829074aaf07} 
+\index{Engine@{Engine}!isRunning@{isRunning}}
+\index{isRunning@{isRunning}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{isRunning()}{isRunning()}}
+{\footnotesize\ttfamily bool Engine\+::is\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restituisce lo stato di esecuzione del motore. 
+
+\begin{DoxyReturn}{Returns}
+True se il motore è in esecuzione, False altrimenti. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_aff7a8cf9c49c04274457c37ad6b12d62}\label{class_engine_aff7a8cf9c49c04274457c37ad6b12d62} 
+\index{Engine@{Engine}!keyboardCallback@{keyboardCallback}}
+\index{keyboardCallback@{keyboardCallback}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{keyboardCallback()}{keyboardCallback()}}
+{\footnotesize\ttfamily void Engine\+::keyboard\+Callback (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*})(unsigned char, int, int)}]{fnct }\end{DoxyParamCaption})}
+
+
+
+Funzione di callback per la tastiera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fnct} & Il puntatore a una funzione di callback per la tastiera. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_engine_a2be22f334c1ed90e0ef2b6d43481b142}\label{class_engine_a2be22f334c1ed90e0ef2b6d43481b142} 
+\index{Engine@{Engine}!load@{load}}
+\index{load@{load}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Engine\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Directory,  }\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Carica un file di scena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Directory} & La directory del file di scena. \\
+\hline
+{\em file\+Name} & Il nome del file di scena. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_engine_affaa29baf3b5b235ddf7669db70c7fc6}\label{class_engine_affaa29baf3b5b235ddf7669db70c7fc6} 
+\index{Engine@{Engine}!mouseCallback@{mouseCallback}}
+\index{mouseCallback@{mouseCallback}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{mouseCallback()}{mouseCallback()}}
+{\footnotesize\ttfamily void Engine\+::mouse\+Callback (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*})(int, int, int, int)}]{fnct }\end{DoxyParamCaption})}
+
+
+
+Funzione di callback per il mouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fnct} & Il puntatore a una funzione di callback per il mouse. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_engine_a9cab11459216b63f62ba2200c603373f}\label{class_engine_a9cab11459216b63f62ba2200c603373f} 
+\index{Engine@{Engine}!setBackgroundColor@{setBackgroundColor}}
+\index{setBackgroundColor@{setBackgroundColor}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{setBackgroundColor()}{setBackgroundColor()}}
+{\footnotesize\ttfamily void Engine\+::set\+Background\+Color (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b }\end{DoxyParamCaption})}
+
+
+
+Imposta il colore di sfondo della finestra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Componente rossa del colore. \\
+\hline
+{\em g} & Componente verde del colore. \\
+\hline
+{\em b} & Componente blu del colore. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_engine_a61a864a1e8ee2fcb76f503571b92f47e}\label{class_engine_a61a864a1e8ee2fcb76f503571b92f47e} 
+\index{Engine@{Engine}!setHeight@{setHeight}}
+\index{setHeight@{setHeight}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{setHeight()}{setHeight()}}
+{\footnotesize\ttfamily void Engine\+::set\+Height (\begin{DoxyParamCaption}\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Imposta l\textquotesingle{}altezza della finestra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & La nuova altezza della finestra. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_engine_a26bf5a0a7dcc3a0f940069f4a870951b}\label{class_engine_a26bf5a0a7dcc3a0f940069f4a870951b} 
+\index{Engine@{Engine}!setTexturePath@{setTexturePath}}
+\index{setTexturePath@{setTexturePath}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{setTexturePath()}{setTexturePath()}}
+{\footnotesize\ttfamily void Engine\+::set\+Texture\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Imposta il percorso delle texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Il percorso delle texture. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_engine_a10f4d68efd77f4201e2047c443f2af06}\label{class_engine_a10f4d68efd77f4201e2047c443f2af06} 
+\index{Engine@{Engine}!specialCallback@{specialCallback}}
+\index{specialCallback@{specialCallback}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{specialCallback()}{specialCallback()}}
+{\footnotesize\ttfamily void Engine\+::special\+Callback (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*})(int, int, int)}]{fnct }\end{DoxyParamCaption})}
+
+
+
+Funzione di callback per tasti speciali. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fnct} & Il puntatore a una funzione di callback per tasti speciali. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_engine_a3b51d1adf076b087d69d964896c594cc}\label{class_engine_a3b51d1adf076b087d69d964896c594cc} 
+\index{Engine@{Engine}!switchGameEnd@{switchGameEnd}}
+\index{switchGameEnd@{switchGameEnd}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{switchGameEnd()}{switchGameEnd()}}
+{\footnotesize\ttfamily void Engine\+::switch\+Game\+End (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})}
+
+
+
+Attiva o disattiva la fine del gioco. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & True per attivare la fine del gioco, False altrimenti. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine.\+h\item 
+engine.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,161 @@
+\doxysection{List Class Reference}
+\hypertarget{class_list}{}\label{class_list}\index{List@{List}}
+
+
+Rappresenta una lista di nodi in una scena 3D.  
+
+
+
+
+{\ttfamily \#include $<$List.\+h$>$}
+
+Inheritance diagram for List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_list}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_list_a4a072165453b73d50cc7e68b881738e6}\label{class_list_a4a072165453b73d50cc7e68b881738e6} 
+{\bfseries List} ()=default
+\begin{DoxyCompactList}\small\item\em Costruttore di default della classe \doxylink{class_list}{List}. \end{DoxyCompactList}\item 
+\Hypertarget{class_list_a70aecf37bd9d779a394e4d50377fbf5f}\label{class_list_a70aecf37bd9d779a394e4d50377fbf5f} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+List} ()
+\begin{DoxyCompactList}\small\item\em Distruttore della classe \doxylink{class_list}{List}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_list_a5c7b748056b4f51677dca317b44e3afd}{add\+Node}} (\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}root)
+\begin{DoxyCompactList}\small\item\em Aggiunge un nodo alla lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_list_ad1547d358a1c252294735ec7e0144c1f}{rendering}} (const glm\+::mat4 \&camera) const override
+\begin{DoxyCompactList}\small\item\em Funzione di rendering per la lista di nodi. \end{DoxyCompactList}\item 
+\Hypertarget{class_list_a3fad6292bd5126eeb437317383338cea}\label{class_list_a3fad6292bd5126eeb437317383338cea} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Rimuove tutti i nodi dalla lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_list_a53989d6bb1d7d6998c26ae3b983ec2eb}{get\+Node}} (std\+::size\+\_\+t idx) const
+\begin{DoxyCompactList}\small\item\em Restituisce il nodo all\textquotesingle{}indice specificato nella lista. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_list_a23ffff1bbbff325f774fdd903a0e8544}{size}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce la dimensione della lista (numero di nodi). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_list_aafaf9783acd3587f478f143101072250}{find\+By\+Id}} (std\+::size\+\_\+t ID) const
+\begin{DoxyCompactList}\small\item\em Restituisce il nodo con l\textquotesingle{}ID specificato. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Object} ()=default
+\begin{DoxyCompactList}\small\item\em Costruttore di default della classe \doxylink{class_object}{Object}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_object_ae1598d83884f9d3007025f4ff37465c8}{Object}} (const std\+::string \&type, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Costruttore della classe \doxylink{class_object}{Object}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em Distruttore virtuale della classe \doxylink{class_object}{Object}. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_object_af2846859a33cc01eafefb6b875271761}{get\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce l\textquotesingle{}identificatore univoco dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_object_a7b3e718c4138fd600b6027b793ec4d9e}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce il tipo dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_object_a2ae90a2c240affe58b0ed7d19702847c}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce il nome dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_aa1746b5f7423e25d945f10c52e8c3ca8}{set\+Type}} (const std\+::string \&type)
+\begin{DoxyCompactList}\small\item\em Imposta il tipo dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+glm\+::vec4 \mbox{\hyperlink{class_object_a3fd4d56fc263848df5fad5feb4414682}{generate\+Unique\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Genera un colore univoco basato sull\textquotesingle{}identificatore univoco dell\textquotesingle{}oggetto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+object\+Name} \{\}
+\begin{DoxyCompactList}\small\item\em Nome dell\textquotesingle{}oggetto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Rappresenta una lista di nodi in una scena 3D. 
+
+La classe \doxylink{class_list}{List} è una classe che rappresenta una lista di nodi in una scena 3D. Deriva dalla classe \doxylink{class_object}{Object} e fornisce funzionalità per la gestione di una collezione di nodi. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_list_a5c7b748056b4f51677dca317b44e3afd}\label{class_list_a5c7b748056b4f51677dca317b44e3afd} 
+\index{List@{List}!addNode@{addNode}}
+\index{addNode@{addNode}!List@{List}}
+\doxysubsubsection{\texorpdfstring{addNode()}{addNode()}}
+{\footnotesize\ttfamily void List\+::add\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{root }\end{DoxyParamCaption})}
+
+
+
+Aggiunge un nodo alla lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Il nodo da aggiungere. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_list_aafaf9783acd3587f478f143101072250}\label{class_list_aafaf9783acd3587f478f143101072250} 
+\index{List@{List}!findById@{findById}}
+\index{findById@{findById}!List@{List}}
+\doxysubsubsection{\texorpdfstring{findById()}{findById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} List\+::find\+By\+Id (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{ID }\end{DoxyParamCaption}) const}
+
+
+
+Restituisce il nodo con l\textquotesingle{}ID specificato. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & L\textquotesingle{}ID del nodo da cercare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Il nodo con l\textquotesingle{}ID specificato o nullptr se non trovato. 
+\end{DoxyReturn}
+\Hypertarget{class_list_a53989d6bb1d7d6998c26ae3b983ec2eb}\label{class_list_a53989d6bb1d7d6998c26ae3b983ec2eb} 
+\index{List@{List}!getNode@{getNode}}
+\index{getNode@{getNode}!List@{List}}
+\doxysubsubsection{\texorpdfstring{getNode()}{getNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} List\+::get\+Node (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{idx }\end{DoxyParamCaption}) const}
+
+
+
+Restituisce il nodo all\textquotesingle{}indice specificato nella lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & L\textquotesingle{}indice del nodo da restituire. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Il nodo all\textquotesingle{}indice specificato. 
+\end{DoxyReturn}
+\Hypertarget{class_list_ad1547d358a1c252294735ec7e0144c1f}\label{class_list_ad1547d358a1c252294735ec7e0144c1f} 
+\index{List@{List}!rendering@{rendering}}
+\index{rendering@{rendering}!List@{List}}
+\doxysubsubsection{\texorpdfstring{rendering()}{rendering()}}
+{\footnotesize\ttfamily void List\+::rendering (\begin{DoxyParamCaption}\item[{const glm\+::mat4 \&}]{camera }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Funzione di rendering per la lista di nodi. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & La matrice di vista. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_object_a763575dce0912dad36e498ae585ba702}{Object}}.
+
+\Hypertarget{class_list_a23ffff1bbbff325f774fdd903a0e8544}\label{class_list_a23ffff1bbbff325f774fdd903a0e8544} 
+\index{List@{List}!size@{size}}
+\index{size@{size}!List@{List}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t List\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Restituisce la dimensione della lista (numero di nodi). 
+
+\begin{DoxyReturn}{Returns}
+La dimensione della lista. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_list_8h}{List.\+h}}\item 
+List.\+cpp\end{DoxyCompactItemize}

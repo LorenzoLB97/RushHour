@@ -1,0 +1,202 @@
+\doxysection{Mesh Class Reference}
+\hypertarget{class_mesh}{}\label{class_mesh}\index{Mesh@{Mesh}}
+
+
+Rappresenta una mesh in una scena 3D.  
+
+
+
+
+{\ttfamily \#include $<$Mesh.\+h$>$}
+
+Inheritance diagram for Mesh\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_mesh}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mesh_aa200b9e345e84f759c60c97d1ea97059}{Mesh}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Costruttore della classe \doxylink{class_mesh}{Mesh}. \end{DoxyCompactList}\item 
+\Hypertarget{class_mesh_a651347a4a847da7d491641c66c7904c5}\label{class_mesh_a651347a4a847da7d491641c66c7904c5} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Mesh} ()=default
+\begin{DoxyCompactList}\small\item\em Distruttore virtuale della classe \doxylink{class_mesh}{Mesh}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_aa6451d5335058257ced6226eedf10a74}{set\+Material}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_material}{Material}} $>$ \&material)
+\begin{DoxyCompactList}\small\item\em Imposta il materiale associato alla mesh. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_ae7d868fa433a9f403dfb2f72356fd2a2}{set\+Lod\+Info}} (const std\+::vector$<$ \mbox{\hyperlink{struct_lod_data}{Lod\+Data}} $>$ \&lod\+Info)
+\begin{DoxyCompactList}\small\item\em Imposta le informazioni sui livelli di dettaglio (LOD) della mesh. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_material}{Material}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_mesh_acbd6f0fe34cc5b61439b2bcd580df590}{get\+Material}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce il materiale associato alla mesh. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_a51b9a640185ae09c9ae45a5067d26979}{rendering}} (const glm\+::mat4 \&inverse\+\_\+camera) const override
+\begin{DoxyCompactList}\small\item\em Funzione di rendering della mesh. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_node}{Node}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_node_a7e4172d32cb73e6af79a7534da12790e}{Node}} (const std\+::string \&type, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Costruttore della classe \doxylink{class_node}{Node}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Node} ()=default
+\begin{DoxyCompactList}\small\item\em Distruttore virtuale della classe \doxylink{class_node}{Node}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_a5f3c7f67ef34efe6694728387a1fa42a}{set\+\_\+local\+\_\+matrix}} (const glm\+::mat4 \&matrix)
+\begin{DoxyCompactList}\small\item\em Imposta la matrice di trasformazione locale. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_a71557901e2d861524794e3a314281a9a}{add\+\_\+child}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_node}{Node}} $>$ child)
+\begin{DoxyCompactList}\small\item\em Aggiunge un nodo figlio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_acd32a895c47c272df247a2e5058e9bc7}{translate}} (const glm\+::vec3 \&translation)
+\begin{DoxyCompactList}\small\item\em Trasla il nodo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_node_ae3ac8540b5f7d584abb72f784ada8a2e}{find\+Node\+By\+Id}} (std\+::size\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Trova un nodo per ID. \end{DoxyCompactList}\item 
+void {\bfseries update\+Global\+Matrices} ()
+\begin{DoxyCompactList}\small\item\em Aggiorna le matrici globali. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_node_a7b0be38ec2da4d87cb4f3fdbe92da318}{get\+\_\+local\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce la matrice di trasformazione locale. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_node_a752d2b8d9293a56abf5d0c53920e32ba}{get\+At}} (std\+::size\+\_\+t idx)
+\begin{DoxyCompactList}\small\item\em Restituisce il nodo figlio all\textquotesingle{}indice specificato. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_node_a3e27d6cbfba01d48725d013d7124ea08}{get\+\_\+parent}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce il nodo genitore. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_node_a40e1802967bbbc1b5f5f0da4885af60d}{get\+\_\+children\+\_\+num}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce il numero di nodi figli. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_node_a89f137ff4d4853bdc509397063bdfbec}{get\+Final\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce la matrice finale nel mondo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_a47954cc72e6dc319f900fcd85c662b5e}{rendering}} (const glm\+::mat4 \&inverse\+\_\+camera) const override
+\begin{DoxyCompactList}\small\item\em Funzione di rendering del nodo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node_a54b83cd085cd4f9fda3faad9c0d558ed}{Node}} (const \mbox{\hyperlink{class_node}{Node}} \&)=delete
+\item 
+\mbox{\hyperlink{class_node}{Node}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_node}{Node}} \&)=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Object} ()=default
+\begin{DoxyCompactList}\small\item\em Costruttore di default della classe \doxylink{class_object}{Object}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_object_ae1598d83884f9d3007025f4ff37465c8}{Object}} (const std\+::string \&type, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Costruttore della classe \doxylink{class_object}{Object}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em Distruttore virtuale della classe \doxylink{class_object}{Object}. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_object_af2846859a33cc01eafefb6b875271761}{get\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce l\textquotesingle{}identificatore univoco dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_object_a7b3e718c4138fd600b6027b793ec4d9e}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce il tipo dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_object_a2ae90a2c240affe58b0ed7d19702847c}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce il nome dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_aa1746b5f7423e25d945f10c52e8c3ca8}{set\+Type}} (const std\+::string \&type)
+\begin{DoxyCompactList}\small\item\em Imposta il tipo dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+glm\+::vec4 \mbox{\hyperlink{class_object_a3fd4d56fc263848df5fad5feb4414682}{generate\+Unique\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Genera un colore univoco basato sull\textquotesingle{}identificatore univoco dell\textquotesingle{}oggetto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_mesh_a03c4645c6b07e6a532e50c137e7f2546}\label{class_mesh_a03c4645c6b07e6a532e50c137e7f2546} 
+static bool {\bfseries render\+Colors\+Only} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_node}{Node}}}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::mat4 {\bfseries m\+\_\+local\+Matrix} \{\}
+\begin{DoxyCompactList}\small\item\em Matrice di trasformazione locale. \end{DoxyCompactList}\item 
+glm\+::mat4 {\bfseries m\+\_\+global\+Matrix} \{\}
+\begin{DoxyCompactList}\small\item\em Matrice globale nel mondo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+parent} \{\}
+\begin{DoxyCompactList}\small\item\em Puntatore al nodo genitore. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_node}{Node}} $>$ $>$ {\bfseries m\+\_\+children} \{\}
+\begin{DoxyCompactList}\small\item\em Vettore di nodi figli. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+object\+Name} \{\}
+\begin{DoxyCompactList}\small\item\em Nome dell\textquotesingle{}oggetto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Rappresenta una mesh in una scena 3D. 
+
+La classe \doxylink{class_mesh}{Mesh} rappresenta una mesh utilizzata per la resa di oggetti in una scena 3D. Deriva dalla classe \doxylink{class_node}{Node} e contiene informazioni sul materiale associato e dettagli di livello di dettaglio (LOD). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_mesh_aa200b9e345e84f759c60c97d1ea97059}\label{class_mesh_aa200b9e345e84f759c60c97d1ea97059} 
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{Mesh()}{Mesh()}}
+{\footnotesize\ttfamily Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Costruttore della classe \doxylink{class_mesh}{Mesh}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Il nome della mesh. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mesh_acbd6f0fe34cc5b61439b2bcd580df590}\label{class_mesh_acbd6f0fe34cc5b61439b2bcd580df590} 
+\index{Mesh@{Mesh}!getMaterial@{getMaterial}}
+\index{getMaterial@{getMaterial}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{getMaterial()}{getMaterial()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_material}{Material}} \texorpdfstring{$\ast$}{*} Mesh\+::get\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Restituisce il materiale associato alla mesh. 
+
+\begin{DoxyReturn}{Returns}
+Il materiale associato alla mesh. 
+\end{DoxyReturn}
+\Hypertarget{class_mesh_a51b9a640185ae09c9ae45a5067d26979}\label{class_mesh_a51b9a640185ae09c9ae45a5067d26979} 
+\index{Mesh@{Mesh}!rendering@{rendering}}
+\index{rendering@{rendering}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{rendering()}{rendering()}}
+{\footnotesize\ttfamily void Mesh\+::rendering (\begin{DoxyParamCaption}\item[{const glm\+::mat4 \&}]{inverse\+\_\+camera }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Funzione di rendering della mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inverse\+\_\+camera} & La matrice di vista invertita. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_object_a763575dce0912dad36e498ae585ba702}{Object}}.
+
+\Hypertarget{class_mesh_ae7d868fa433a9f403dfb2f72356fd2a2}\label{class_mesh_ae7d868fa433a9f403dfb2f72356fd2a2} 
+\index{Mesh@{Mesh}!setLodInfo@{setLodInfo}}
+\index{setLodInfo@{setLodInfo}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{setLodInfo()}{setLodInfo()}}
+{\footnotesize\ttfamily void Mesh\+::set\+Lod\+Info (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_lod_data}{Lod\+Data}} $>$ \&}]{lod\+Info }\end{DoxyParamCaption})}
+
+
+
+Imposta le informazioni sui livelli di dettaglio (LOD) della mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lod\+Info} & Le informazioni sui livelli di dettaglio. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mesh_aa6451d5335058257ced6226eedf10a74}\label{class_mesh_aa6451d5335058257ced6226eedf10a74} 
+\index{Mesh@{Mesh}!setMaterial@{setMaterial}}
+\index{setMaterial@{setMaterial}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{setMaterial()}{setMaterial()}}
+{\footnotesize\ttfamily void Mesh\+::set\+Material (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_material}{Material}} $>$ \&}]{material }\end{DoxyParamCaption})}
+
+
+
+Imposta il materiale associato alla mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & Il materiale da associare alla mesh. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_mesh_8h}{Mesh.\+h}}\item 
+Mesh.\+cpp\end{DoxyCompactItemize}

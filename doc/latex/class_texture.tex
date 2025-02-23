@@ -1,0 +1,187 @@
+\doxysection{Texture Class Reference}
+\hypertarget{class_texture}{}\label{class_texture}\index{Texture@{Texture}}
+
+
+Rappresenta una texture nella scena 3D.  
+
+
+
+
+{\ttfamily \#include $<$Texture.\+h$>$}
+
+Inheritance diagram for Texture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_texture}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_texture_abe4cbed367fc5dfa637525709a16ab07}{Texture}} (const std\+::string name)
+\begin{DoxyCompactList}\small\item\em Costruisce un oggetto \doxylink{class_texture}{Texture} con il nome specificato. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_texture_ac80fb5862f1116f9dfd2d693f92b0755}{get\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce il percorso della directory delle texture. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_texture_a8c4cebecb20bcf69c932f40a0d5d883f}{get\+Anisotropic\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce il livello anisotropico massimo supportato. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_texture_a8e30499e76399a23eb8becd6b3c484f5}{rendering}} (const glm\+::mat4 \&camera\+Inv) const override
+\begin{DoxyCompactList}\small\item\em Rendering della texture con le impostazioni specificate. \end{DoxyCompactList}\item 
+\Hypertarget{class_texture_a755c0d1925b13605962b259fb345cf88}\label{class_texture_a755c0d1925b13605962b259fb345cf88} 
+void {\bfseries set\+Text\+Id} ()
+\begin{DoxyCompactList}\small\item\em Imposta l\textquotesingle{}ID della texture. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_texture_a5e1c75d90bc0701feab02363db2418e9}{check\+Bitmap\+Existence}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce lo stato di esistenza del bitmap associato alla texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Object} ()=default
+\begin{DoxyCompactList}\small\item\em Costruttore di default della classe \doxylink{class_object}{Object}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_object_ae1598d83884f9d3007025f4ff37465c8}{Object}} (const std\+::string \&type, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Costruttore della classe \doxylink{class_object}{Object}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em Distruttore virtuale della classe \doxylink{class_object}{Object}. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_object_af2846859a33cc01eafefb6b875271761}{get\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce l\textquotesingle{}identificatore univoco dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_object_a7b3e718c4138fd600b6027b793ec4d9e}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce il tipo dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_object_a2ae90a2c240affe58b0ed7d19702847c}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce il nome dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_aa1746b5f7423e25d945f10c52e8c3ca8}{set\+Type}} (const std\+::string \&type)
+\begin{DoxyCompactList}\small\item\em Imposta il tipo dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+glm\+::vec4 \mbox{\hyperlink{class_object_a3fd4d56fc263848df5fad5feb4414682}{generate\+Unique\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Genera un colore univoco basato sull\textquotesingle{}identificatore univoco dell\textquotesingle{}oggetto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_texture_adc32e9b824b0015c590a40f4392aca51}{set\+Path}} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em Imposta il percorso della directory delle texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+object\+Name} \{\}
+\begin{DoxyCompactList}\small\item\em Nome dell\textquotesingle{}oggetto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Rappresenta una texture nella scena 3D. 
+
+La classe \doxylink{class_texture}{Texture} gestisce l\textquotesingle{}acquisizione, il caricamento e l\textquotesingle{}utilizzo di texture nei modelli 3D. Include funzionalità per il rendering della texture, il recupero dell\textquotesingle{}ID della texture, e il settaggio e ottenimento del percorso del file della texture. Inoltre, la classe offre il supporto per il filtraggio anisotropico quando disponibile.
+
+Esempio d\textquotesingle{}uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_texture}{Texture}}\ myTexture(\textcolor{stringliteral}{"{}Texture1"{}});}
+\DoxyCodeLine{myTexture.setPath(\textcolor{stringliteral}{"{}path/to/texture.png"{}});}
+\DoxyCodeLine{myTexture.setTextId();}
+\DoxyCodeLine{myTexture.rendering(cameraInverseMatrix);}
+
+\end{DoxyCode}
+
+
+\begin{DoxyNote}{Note}
+La classe supporta il caricamento di immagini di texture nei formati comuni e il rendering in un contesto Open\+GL. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_texture_abe4cbed367fc5dfa637525709a16ab07}\label{class_texture_abe4cbed367fc5dfa637525709a16ab07} 
+\index{Texture@{Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}}
+{\footnotesize\ttfamily Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Costruisce un oggetto \doxylink{class_texture}{Texture} con il nome specificato. 
+
+Questo costruttore inizializza un oggetto \doxylink{class_texture}{Texture} con il nome fornito e imposta il tipo dell\textquotesingle{}oggetto su "{}\+Texture"{}. Verifica anche il supporto per il filtraggio anisotropico e imposta i livelli anisotropici massimi se supportato.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Il nome della texture. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_texture_a5e1c75d90bc0701feab02363db2418e9}\label{class_texture_a5e1c75d90bc0701feab02363db2418e9} 
+\index{Texture@{Texture}!checkBitmapExistence@{checkBitmapExistence}}
+\index{checkBitmapExistence@{checkBitmapExistence}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{checkBitmapExistence()}{checkBitmapExistence()}}
+{\footnotesize\ttfamily bool Texture\+::check\+Bitmap\+Existence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Restituisce lo stato di esistenza del bitmap associato alla texture. 
+
+\begin{DoxyReturn}{Returns}
+True se il bitmap esiste, altrimenti False. 
+\end{DoxyReturn}
+\Hypertarget{class_texture_a8c4cebecb20bcf69c932f40a0d5d883f}\label{class_texture_a8c4cebecb20bcf69c932f40a0d5d883f} 
+\index{Texture@{Texture}!getAnisotropicLevel@{getAnisotropicLevel}}
+\index{getAnisotropicLevel@{getAnisotropicLevel}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{getAnisotropicLevel()}{getAnisotropicLevel()}}
+{\footnotesize\ttfamily bool Texture\+::get\+Anisotropic\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restituisce il livello anisotropico massimo supportato. 
+
+\begin{DoxyReturn}{Returns}
+Il livello anisotropico massimo supportato. 
+\end{DoxyReturn}
+\Hypertarget{class_texture_ac80fb5862f1116f9dfd2d693f92b0755}\label{class_texture_ac80fb5862f1116f9dfd2d693f92b0755} 
+\index{Texture@{Texture}!getPath@{getPath}}
+\index{getPath@{getPath}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{getPath()}{getPath()}}
+{\footnotesize\ttfamily std\+::string Texture\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restituisce il percorso della directory delle texture. 
+
+\begin{DoxyReturn}{Returns}
+Il percorso della directory delle texture. 
+\end{DoxyReturn}
+\Hypertarget{class_texture_a8e30499e76399a23eb8becd6b3c484f5}\label{class_texture_a8e30499e76399a23eb8becd6b3c484f5} 
+\index{Texture@{Texture}!rendering@{rendering}}
+\index{rendering@{rendering}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{rendering()}{rendering()}}
+{\footnotesize\ttfamily void Texture\+::rendering (\begin{DoxyParamCaption}\item[{const glm\+::mat4 \&}]{camera\+Inv }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendering della texture con le impostazioni specificate. 
+
+Questa funzione imposta e applica le proprietà di rendering della texture, come le coordinate circolari, il filtraggio anisotropico, la filtrazione trilineare e il mappaggio mip.
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Inv} & La matrice di trasformazione inversa della camera. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_object_a763575dce0912dad36e498ae585ba702}{Object}}.
+
+\Hypertarget{class_texture_adc32e9b824b0015c590a40f4392aca51}\label{class_texture_adc32e9b824b0015c590a40f4392aca51} 
+\index{Texture@{Texture}!setPath@{setPath}}
+\index{setPath@{setPath}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{setPath()}{setPath()}}
+{\footnotesize\ttfamily void Texture\+::set\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Imposta il percorso della directory delle texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Il percorso della directory delle texture. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Texture.\+h\item 
+Texture.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,32 @@
+\doxysection{Mesh\+Structures.\+h}
+\hypertarget{_mesh_structures_8h_source}{}\label{_mesh_structures_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ MESH\_STRUCTS\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MESH\_STRUCTS\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_engine_export_8h}{EngineExport.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <glm/glm.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <glm/gtc/type\_ptr.hpp>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{_engine_export_8h_a77278c8cc96e39fb27b5d0a347c8fb3d}{LIB\_API}}\ \mbox{\hyperlink{struct_vertex_data}{VertexData}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{struct_vertex_data_a56b837ab701f233a361f9e9662d5ae14}{vertex}};\ }
+\DoxyCodeLine{00027\ \ \ \ \ glm::vec4\ \mbox{\hyperlink{struct_vertex_data_a950a42db0d25615221ffdd91fbed4f25}{normal}};\ }
+\DoxyCodeLine{00028\ \ \ \ \ glm::vec2\ \mbox{\hyperlink{struct_vertex_data_a8fcaaebbec9ebd7ef6eac3548b8e4a19}{textureData}};\ }
+\DoxyCodeLine{00029\ \ \ \ \ glm::vec4\ \mbox{\hyperlink{struct_vertex_data_aa08b70d71dabbfa4a7a11efe2d22f1dc}{tangentData}};\ }
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{_engine_export_8h_a77278c8cc96e39fb27b5d0a347c8fb3d}{LIB\_API}}\ \mbox{\hyperlink{struct_lod_data}{LodData}}\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ std::int32\_t\ \mbox{\hyperlink{struct_lod_data_a3ecf3b9fcd2f2b7099a68ccf501adb1a}{numVertices}};\ }
+\DoxyCodeLine{00040\ \ \ \ \ std::int32\_t\ \mbox{\hyperlink{struct_lod_data_aa0e785d42f02f6b07048bf4202e77142}{numFaces}};\ }
+\DoxyCodeLine{00041\ \ \ \ \ std::vector<VertexData>\ \mbox{\hyperlink{struct_lod_data_ac6892fa12c2e44d676d24a82848962dd}{vertices}};\ }
+\DoxyCodeLine{00042\ \ \ \ \ std::vector<std::array<std::uint32\_t,\ 3>>\ \mbox{\hyperlink{struct_lod_data_a2a04b95fc5eb1cd553d7558d5ae3795f}{faces}};\ }
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

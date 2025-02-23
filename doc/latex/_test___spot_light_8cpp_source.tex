@@ -1,0 +1,42 @@
+\doxysection{Test\+\_\+\+Spot\+Light.\+cpp}
+\hypertarget{_test___spot_light_8cpp_source}{}\label{_test___spot_light_8cpp_source}\index{tests/Test\_SpotLight.cpp@{tests/Test\_SpotLight.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}../SpotLight.h"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keywordtype}{void}\ testSpotLightMethods()\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{comment}{//\ Creazione\ della\ luce\ spot\ di\ test}}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{class_spot_light}{SpotLight}}\ spotLight(\textcolor{stringliteral}{"{}TestSpotLight"{}});}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{//\ Verifica\ dell'ID,\ del\ tipo\ e\ del\ nome}}
+\DoxyCodeLine{00009\ \ \ \ \ assert(spotLight.getID()\ ==\ 12);}
+\DoxyCodeLine{00010\ \ \ \ \ assert(spotLight.getType()\ ==\ \textcolor{stringliteral}{"{}SpotLight"{}});}
+\DoxyCodeLine{00011\ \ \ \ \ assert(spotLight.getName()\ ==\ \textcolor{stringliteral}{"{}TestSpotLight"{}});}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//\ Verifica\ del\ numero\ di\ luce}}
+\DoxyCodeLine{00014\ \ \ \ \ assert(spotLight.getLightNumber()\ ==\ 0);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Verifica\ delle\ impostazioni\ della\ luce}}
+\DoxyCodeLine{00017\ \ \ \ \ spotLight.setLightAmbient(glm::vec4(0.2f,\ 0.2f,\ 0.2f,\ 1.0f));}
+\DoxyCodeLine{00018\ \ \ \ \ spotLight.setLightDiffuse(glm::vec4(0.8f,\ 0.8f,\ 0.8f,\ 1.0f));}
+\DoxyCodeLine{00019\ \ \ \ \ spotLight.setLightSpecular(glm::vec4(1.0f,\ 1.0f,\ 1.0f,\ 1.0f));}
+\DoxyCodeLine{00020\ \ \ \ \ spotLight.setColor(glm::vec3(1.0f,\ 0.0f,\ 0.0f));}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Verifica\ della\ direzione\ della\ luce\ spot}}
+\DoxyCodeLine{00023\ \ \ \ \ spotLight.setDirection(glm::vec3(-\/1.0f,\ -\/1.0f,\ -\/1.0f));}
+\DoxyCodeLine{00024\ \ \ \ \ glm::vec3\ direction\ =\ spotLight.getDirection();}
+\DoxyCodeLine{00025\ \ \ \ \ assert(direction.x\ ==\ -\/1.0f);}
+\DoxyCodeLine{00026\ \ \ \ \ assert(direction.y\ ==\ -\/1.0f);}
+\DoxyCodeLine{00027\ \ \ \ \ assert(direction.z\ ==\ -\/1.0f);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ Verifica\ dell'angolo\ di\ taglio\ della\ luce\ spot}}
+\DoxyCodeLine{00030\ \ \ \ \ spotLight.setLightCutoff(45.0f);}
+\DoxyCodeLine{00031\ \ \ \ \ assert(spotLight.getLightCutoff()\ ==\ 45.0f);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ Verifica\ dell'esponente\ della\ luce\ spot}}
+\DoxyCodeLine{00034\ \ \ \ \ spotLight.spotExponent(20.0f);}
+\DoxyCodeLine{00035\ \ \ \ \ assert(spotLight.getSpotExponent()\ ==\ 20.0f);}
+\DoxyCodeLine{00036\ \}}
+
+\end{DoxyCode}

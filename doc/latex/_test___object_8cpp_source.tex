@@ -1,0 +1,47 @@
+\doxysection{Test\+\_\+\+Object.\+cpp}
+\hypertarget{_test___object_8cpp_source}{}\label{_test___object_8cpp_source}\index{tests/Test\_Object.cpp@{tests/Test\_Object.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_object_8h}{../Object.h}}"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_test_object}{TestObject}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_object}{Object}}\ \{}
+\DoxyCodeLine{00005\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{class_test_object}{TestObject}}(\textcolor{keyword}{const}\ std::string\&\ type,\ \textcolor{keyword}{const}\ std::string\&\ name)}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_object_afe9eeddd7068a37f62d3276a2fb49864}{Object}}(type,\ name)\ \{\}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//\ Implementazione\ del\ metodo\ virtuale\ puro}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_test_object_a476b48709ca9a426d4cab62f2281acd1}{rendering}}(\textcolor{keyword}{const}\ glm::mat4\&\ inverse\_camera)\textcolor{keyword}{\ const\ override\ }\{\}}
+\DoxyCodeLine{00011\ \};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{void}\ testObjectMethods()\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ Creazione\ di\ un\ oggetto\ di\ test}}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_test_object}{TestObject}}\ testObject(\textcolor{stringliteral}{"{}ObjectType"{}},\ \textcolor{stringliteral}{"{}ObjectName"{}});}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ Verifica\ dell'ID,\ del\ tipo\ e\ del\ nome}}
+\DoxyCodeLine{00018\ \ \ \ \ assert(testObject.getID()\ ==\ 8);}
+\DoxyCodeLine{00019\ \ \ \ \ assert(testObject.getType()\ ==\ \textcolor{stringliteral}{"{}ObjectType"{}});}
+\DoxyCodeLine{00020\ \ \ \ \ assert(testObject.getName()\ ==\ \textcolor{stringliteral}{"{}ObjectName"{}});}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Cambio\ del\ tipo\ e\ verifica}}
+\DoxyCodeLine{00023\ \ \ \ \ testObject.setType(\textcolor{stringliteral}{"{}NewType"{}});}
+\DoxyCodeLine{00024\ \ \ \ \ assert(testObject.getType()\ ==\ \textcolor{stringliteral}{"{}NewType"{}});}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ Verifica\ della\ generazione\ di\ un\ colore\ univoco}}
+\DoxyCodeLine{00027\ \ \ \ \ glm::vec4\ uniqueColor\ =\ testObject.generateUniqueColor();}
+\DoxyCodeLine{00028\ \ \ \ \ assert(uniqueColor.r\ ==\ 8\ \&\&\ uniqueColor.g\ ==\ 8\ \&\&\ uniqueColor.b\ ==\ 8\ \&\&\ uniqueColor.a\ ==\ 255);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ Creazione\ di\ un\ secondo\ oggetto\ di\ test}}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_test_object}{TestObject}}\ testObject2(\textcolor{stringliteral}{"{}ObjectType"{}},\ \textcolor{stringliteral}{"{}ObjectName2"{}});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ Verifica\ dell'ID,\ del\ tipo\ e\ del\ nome}}
+\DoxyCodeLine{00034\ \ \ \ \ assert(testObject2.getID()\ ==\ 9);}
+\DoxyCodeLine{00035\ \ \ \ \ assert(testObject2.getName()\ ==\ \textcolor{stringliteral}{"{}ObjectName2"{}});}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ Verifica\ della\ generazione\ di\ un\ colore\ univoco\ per\ il\ secondo\ oggetto}}
+\DoxyCodeLine{00038\ \ \ \ \ glm::vec4\ uniqueColor2\ =\ testObject2.generateUniqueColor();}
+\DoxyCodeLine{00039\ \ \ \ \ assert(uniqueColor2.r\ ==\ 9\ \&\&\ uniqueColor2.g\ ==\ 9\ \&\&\ uniqueColor2.b\ ==\ 9\ \&\&\ uniqueColor2.a\ ==\ 255);}
+\DoxyCodeLine{00040\ \}}
+\DoxyCodeLine{00041\ }
+
+\end{DoxyCode}

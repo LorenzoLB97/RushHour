@@ -1,0 +1,22 @@
+\doxysection{Engine\+Export.\+h}
+\hypertarget{_engine_export_8h_source}{}\label{_engine_export_8h_source}\mbox{\hyperlink{_engine_export_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ ENGINE\_EXPORT\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ ENGINE\_EXPORT\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \textcolor{comment}{//\ Needed\ so\ we\ can\ use\ the\ marked\ classes\ from\ outside\ engine}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifdef\ \_WINDOWS\ \ \ \ \ }}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifdef\ ENGINE\_EXPORTS}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ LIB\_API\ \_\_declspec(dllexport)\ }}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ LIB\_API\ \_\_declspec(dllimport)\ }}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#endif\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#else\ }}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ LIB\_API\ \ }}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ENGINE\_EXPORT\_H}}
+
+\end{DoxyCode}

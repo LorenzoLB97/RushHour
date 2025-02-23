@@ -1,0 +1,36 @@
+\doxysection{Lod\+Data Struct Reference}
+\hypertarget{struct_lod_data}{}\label{struct_lod_data}\index{LodData@{LodData}}
+
+
+Rappresenta i dati di un livello di dettaglio (LOD) della mesh.  
+
+
+
+
+{\ttfamily \#include $<$Mesh\+Structures.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_lod_data_a3ecf3b9fcd2f2b7099a68ccf501adb1a}\label{struct_lod_data_a3ecf3b9fcd2f2b7099a68ccf501adb1a} 
+std\+::int32\+\_\+t {\bfseries num\+Vertices}
+\begin{DoxyCompactList}\small\item\em Numero di vertici nel LOD. \end{DoxyCompactList}\item 
+\Hypertarget{struct_lod_data_aa0e785d42f02f6b07048bf4202e77142}\label{struct_lod_data_aa0e785d42f02f6b07048bf4202e77142} 
+std\+::int32\+\_\+t {\bfseries num\+Faces}
+\begin{DoxyCompactList}\small\item\em Numero di facce nel LOD. \end{DoxyCompactList}\item 
+\Hypertarget{struct_lod_data_ac6892fa12c2e44d676d24a82848962dd}\label{struct_lod_data_ac6892fa12c2e44d676d24a82848962dd} 
+std\+::vector$<$ \mbox{\hyperlink{struct_vertex_data}{Vertex\+Data}} $>$ {\bfseries vertices}
+\begin{DoxyCompactList}\small\item\em Vettore di dati dei vertici. \end{DoxyCompactList}\item 
+\Hypertarget{struct_lod_data_a2a04b95fc5eb1cd553d7558d5ae3795f}\label{struct_lod_data_a2a04b95fc5eb1cd553d7558d5ae3795f} 
+std\+::vector$<$ std\+::array$<$ std\+::uint32\+\_\+t, 3 $>$ $>$ {\bfseries faces}
+\begin{DoxyCompactList}\small\item\em Vettore di indici delle facce. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Rappresenta i dati di un livello di dettaglio (LOD) della mesh. 
+
+La struttura \doxylink{struct_lod_data}{Lod\+Data} contiene il numero di vertici e facce, nonché i vettori di vertici e facce per un LOD della mesh. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Mesh\+Structures.\+h\end{DoxyCompactItemize}

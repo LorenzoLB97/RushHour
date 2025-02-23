@@ -1,0 +1,42 @@
+\doxysection{Mesh\+Movement\+Manager.\+h}
+\hypertarget{_mesh_movement_manager_8h_source}{}\label{_mesh_movement_manager_8h_source}\mbox{\hyperlink{_mesh_movement_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ MESH\_MANAGER\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MESH\_MANAGER\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_mesh_8h}{Mesh.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_engine_export_8h}{EngineExport.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{_engine_export_8h_a77278c8cc96e39fb27b5d0a347c8fb3d}{LIB\_API}}\ \mbox{\hyperlink{class_mesh_movement_manager}{MeshMovementManager}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_mesh}{Mesh}}*\ m\_currentActiveMesh\{\};\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_blinking\{\};\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_limit\{\};\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_speed\{\};\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_isMoving\{\};\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ setActiveMesh(\mbox{\hyperlink{class_mesh}{Mesh}}*\ mesh);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ setMovement(\textcolor{keywordtype}{float}\ limit,\ \textcolor{keywordtype}{float}\ speed\ =\ 1.0f);}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ isMoving();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ blink();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{float}\ getLimit();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ reset();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ moveActiveMesh();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{class_mesh}{Mesh}}*\ getActiveMesh();}
+\DoxyCodeLine{00076\ \};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

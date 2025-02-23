@@ -1,0 +1,41 @@
+\doxysection{Spot\+Light.\+h}
+\hypertarget{_spot_light_8h_source}{}\label{_spot_light_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SPOT\_LIGHT}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SPOT\_LIGHT}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_engine_export_8h}{EngineExport.h}}"{}}\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_light_8h}{Light.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{_engine_export_8h_a77278c8cc96e39fb27b5d0a347c8fb3d}{LIB\_API}}\ \mbox{\hyperlink{class_spot_light}{SpotLight}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_light}{Light}}\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ glm::vec3\ direction\{\ 1\ \};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ cutOff\{\};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{float}\ exponent\{\};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_spot_light}{SpotLight}}(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_spot_light}{\string~SpotLight}}()\ \{\};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_light_a9a6e0bb954b294338ada920eb506f3dd}{rendering}}(\textcolor{keyword}{const}\ glm::mat4\&\ inverse\_camera)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ setDirection(\textcolor{keyword}{const}\ glm::vec3\&\ lightDirection);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ setLightCutoff(\textcolor{keywordtype}{float}\ lightCutoff);\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{float}\ getLightCutoff()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00081\ \ \ \ \ glm::vec3\ getDirection()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{float}\ getSpotExponent()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ spotExponent(\textcolor{keywordtype}{float}\ exponent);}
+\DoxyCodeLine{00099\ \};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

@@ -1,0 +1,443 @@
+\doxysection{Camera Class Reference}
+\hypertarget{class_camera}{}\label{class_camera}\index{Camera@{Camera}}
+
+
+Rappresenta una telecamera nel sistema.  
+
+
+
+
+{\ttfamily \#include $<$Primary\+Camera.\+h$>$}
+
+Inheritance diagram for Camera\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_camera}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_camera_ad0e65086a370b5c433bc863b1f6b681f}{Camera}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Costruttore della classe \doxylink{class_camera}{Camera}. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_a1357f4ce765249c161bedf021130d2f4}\label{class_camera_a1357f4ce765249c161bedf021130d2f4} 
+void {\bfseries set\+Initial\+Position} ()
+\begin{DoxyCompactList}\small\item\em Imposta la posizione iniziale della telecamera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_ac93b8de5039b7eb975be9cae319f7aea}{set\+Speed\+Movement}} (float speed)
+\begin{DoxyCompactList}\small\item\em Imposta la velocità di movimento della telecamera. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_camera_afdca259a5f12c882f16fc9c06298e38b}{get\+Orthogonal\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce la matrice ortografica della telecamera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a5887327ae96f6868c0d356d53af79fe9}{set\+Orthogonal\+Matrix}} (const glm\+::mat4 \&orthogonal\+Matrix)
+\begin{DoxyCompactList}\small\item\em Imposta la matrice ortografica della telecamera. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_ab258ce49a1d0e3761484109d7c218ec5}\label{class_camera_ab258ce49a1d0e3761484109d7c218ec5} 
+void {\bfseries load\+Projection\+Matrix} ()
+\begin{DoxyCompactList}\small\item\em Carica la matrice di proiezione della telecamera. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_ab4b958b21d915b81ca35334879322534}\label{class_camera_ab4b958b21d915b81ca35334879322534} 
+void {\bfseries to3d\+Mode} () const
+\begin{DoxyCompactList}\small\item\em Abilita la modalità 3D della telecamera. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_a58208e05a36cc7876722cce0d8d98b5e}\label{class_camera_a58208e05a36cc7876722cce0d8d98b5e} 
+void {\bfseries to2d\+Mode} () const
+\begin{DoxyCompactList}\small\item\em Abilita la modalità 2D della telecamera. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_a230eecb31997d07c75e737ecf5e7edcf}\label{class_camera_a230eecb31997d07c75e737ecf5e7edcf} 
+void {\bfseries move\+Forward} ()
+\begin{DoxyCompactList}\small\item\em Sposta la telecamera in avanti. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_acbf35947eb5d887a76538e9525cf34a0}\label{class_camera_acbf35947eb5d887a76538e9525cf34a0} 
+void {\bfseries move\+Left} ()
+\begin{DoxyCompactList}\small\item\em Sposta la telecamera a sinistra. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_acf2f00de2e99af1fcd9b5e770fce7ae3}\label{class_camera_acf2f00de2e99af1fcd9b5e770fce7ae3} 
+void {\bfseries move\+Right} ()
+\begin{DoxyCompactList}\small\item\em Sposta la telecamera a destra. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_a3e4e7a9dae87aa236976c5288cf9fbbf}\label{class_camera_a3e4e7a9dae87aa236976c5288cf9fbbf} 
+void {\bfseries move\+Backwards} ()
+\begin{DoxyCompactList}\small\item\em Sposta la telecamera indietro. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_aa6dc57f7ed60e5bfc106d48c7431c8c1}\label{class_camera_aa6dc57f7ed60e5bfc106d48c7431c8c1} 
+void {\bfseries move\+Up} ()
+\begin{DoxyCompactList}\small\item\em Sposta la telecamera verso l\textquotesingle{}alto. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_ab8c429b8547f3a106657ecd07dffc5bc}\label{class_camera_ab8c429b8547f3a106657ecd07dffc5bc} 
+void {\bfseries move\+Down} ()
+\begin{DoxyCompactList}\small\item\em Sposta la telecamera verso il basso. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_aca267e6ed663152af731110d95816c70}\label{class_camera_aca267e6ed663152af731110d95816c70} 
+void {\bfseries look\+Up} ()
+\begin{DoxyCompactList}\small\item\em Inclina la telecamera verso l\textquotesingle{}alto. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_a59303bd8f360cd7cd58a9ef3d65dca91}\label{class_camera_a59303bd8f360cd7cd58a9ef3d65dca91} 
+void {\bfseries look\+Down} ()
+\begin{DoxyCompactList}\small\item\em Inclina la telecamera verso il basso. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_ae100f6073b7c2b120267108861200938}\label{class_camera_ae100f6073b7c2b120267108861200938} 
+void {\bfseries look\+Left} ()
+\begin{DoxyCompactList}\small\item\em Inclina la telecamera a sinistra. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_ac44f554e9480edb95c7f4107562aba92}\label{class_camera_ac44f554e9480edb95c7f4107562aba92} 
+void {\bfseries look\+Right} ()
+\begin{DoxyCompactList}\small\item\em Inclina la telecamera a destra. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_a486fd1e1eeeb0033968f81359a6c0009}\label{class_camera_a486fd1e1eeeb0033968f81359a6c0009} 
+void {\bfseries rotate\+Left} ()
+\begin{DoxyCompactList}\small\item\em Ruota la telecamera verso sinistra. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_a9843d8ee50251503c5c9ab3d72cb74d3}\label{class_camera_a9843d8ee50251503c5c9ab3d72cb74d3} 
+void {\bfseries rotate\+Right} ()
+\begin{DoxyCompactList}\small\item\em Ruota la telecamera verso destra. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_camera_ad8df1df9aff27dcc883bfdfc40698a4f}{set\+Projection\+Matrix}} (float width, float height)
+\begin{DoxyCompactList}\small\item\em Imposta la matrice di proiezione della telecamera. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_a6aa420e3a631439b97cc3e37f3757ed4}\label{class_camera_a6aa420e3a631439b97cc3e37f3757ed4} 
+void {\bfseries switch\+Camera} ()
+\begin{DoxyCompactList}\small\item\em Cambia la modalità della telecamera tra dinamica e statica. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_camera_a34a4428dd7afb1678c4e54b4ad6534ea}{get\+Camera\+Inverse}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce la matrice inversa della telecamera. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_a93251b07d58f72cfd64da0f866e28229}\label{class_camera_a93251b07d58f72cfd64da0f866e28229} 
+void {\bfseries reload\+Dynamic\+Camera} ()
+\begin{DoxyCompactList}\small\item\em Ricarica la telecamera dinamica. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_camera_a9278e37f18960a72de4b1760cd287dc1}{is\+Dynamic}} ()
+\begin{DoxyCompactList}\small\item\em Verifica se la telecamera è in modalità dinamica. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_a4786d0ba95b66f3afbfc05480ba364e2}{get\+Speed\+Movement}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce la velocità di movimento della telecamera. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_a915ba8e0b48e0d0b0aca02f22a9410fd}{get\+AngleX}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce l\textquotesingle{}angolo X della telecamera. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_a6e6b7bb92516b98fda2060bdf28143a3}{get\+AngleY}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce l\textquotesingle{}angolo Y della telecamera. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_a15a5c2a770fc676bf89c189a1311b72a}{get\+AngleZ}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce l\textquotesingle{}angolo Z della telecamera. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_acfdfc9d8b5b2ac82108a5c538aca8f83}{get\+Distance}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce la distanza della telecamera. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_a58dec8a5329f79a5648b9d6703030849}{get\+EyeX}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce la coordinata X dell\textquotesingle{}occhio della telecamera. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_a842ea2ea9e2ef813e815f847168108aa}{get\+EyeY}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce la coordinata Y dell\textquotesingle{}occhio della telecamera. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_a247977e58bda8e0ebc353fa9f3954c7d}{get\+EyeZ}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce la coordinata Z dell\textquotesingle{}occhio della telecamera. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_a7250266b1b1a8de2d754e6d9ccf2e2df}{get\+AtX}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce la coordinata X del punto di visuale della telecamera. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_camera_a844a0ec35c073c9c03d4986b412d3135}{get\+AtY}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce la coordinata Y del punto di visuale della telecamera. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_camera_adf09522521723786b9f405c99d6594c7}{get\+Projection\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce la matrice di proiezione della telecamera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_node}{Node}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_node_a7e4172d32cb73e6af79a7534da12790e}{Node}} (const std\+::string \&type, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Costruttore della classe \doxylink{class_node}{Node}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Node} ()=default
+\begin{DoxyCompactList}\small\item\em Distruttore virtuale della classe \doxylink{class_node}{Node}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_a5f3c7f67ef34efe6694728387a1fa42a}{set\+\_\+local\+\_\+matrix}} (const glm\+::mat4 \&matrix)
+\begin{DoxyCompactList}\small\item\em Imposta la matrice di trasformazione locale. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_a71557901e2d861524794e3a314281a9a}{add\+\_\+child}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_node}{Node}} $>$ child)
+\begin{DoxyCompactList}\small\item\em Aggiunge un nodo figlio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_acd32a895c47c272df247a2e5058e9bc7}{translate}} (const glm\+::vec3 \&translation)
+\begin{DoxyCompactList}\small\item\em Trasla il nodo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_node_ae3ac8540b5f7d584abb72f784ada8a2e}{find\+Node\+By\+Id}} (std\+::size\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Trova un nodo per ID. \end{DoxyCompactList}\item 
+void {\bfseries update\+Global\+Matrices} ()
+\begin{DoxyCompactList}\small\item\em Aggiorna le matrici globali. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_node_a7b0be38ec2da4d87cb4f3fdbe92da318}{get\+\_\+local\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce la matrice di trasformazione locale. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_node_a752d2b8d9293a56abf5d0c53920e32ba}{get\+At}} (std\+::size\+\_\+t idx)
+\begin{DoxyCompactList}\small\item\em Restituisce il nodo figlio all\textquotesingle{}indice specificato. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_node_a3e27d6cbfba01d48725d013d7124ea08}{get\+\_\+parent}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce il nodo genitore. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_node_a40e1802967bbbc1b5f5f0da4885af60d}{get\+\_\+children\+\_\+num}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce il numero di nodi figli. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_node_a89f137ff4d4853bdc509397063bdfbec}{get\+Final\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce la matrice finale nel mondo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_a47954cc72e6dc319f900fcd85c662b5e}{rendering}} (const glm\+::mat4 \&inverse\+\_\+camera) const override
+\begin{DoxyCompactList}\small\item\em Funzione di rendering del nodo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node_a54b83cd085cd4f9fda3faad9c0d558ed}{Node}} (const \mbox{\hyperlink{class_node}{Node}} \&)=delete
+\item 
+\mbox{\hyperlink{class_node}{Node}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_node}{Node}} \&)=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Object} ()=default
+\begin{DoxyCompactList}\small\item\em Costruttore di default della classe \doxylink{class_object}{Object}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_object_ae1598d83884f9d3007025f4ff37465c8}{Object}} (const std\+::string \&type, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Costruttore della classe \doxylink{class_object}{Object}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em Distruttore virtuale della classe \doxylink{class_object}{Object}. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_object_af2846859a33cc01eafefb6b875271761}{get\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce l\textquotesingle{}identificatore univoco dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_object_a7b3e718c4138fd600b6027b793ec4d9e}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce il tipo dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_object_a2ae90a2c240affe58b0ed7d19702847c}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Restituisce il nome dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_aa1746b5f7423e25d945f10c52e8c3ca8}{set\+Type}} (const std\+::string \&type)
+\begin{DoxyCompactList}\small\item\em Imposta il tipo dell\textquotesingle{}oggetto. \end{DoxyCompactList}\item 
+glm\+::vec4 \mbox{\hyperlink{class_object_a3fd4d56fc263848df5fad5feb4414682}{generate\+Unique\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Genera un colore univoco basato sull\textquotesingle{}identificatore univoco dell\textquotesingle{}oggetto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_node}{Node}}}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::mat4 {\bfseries m\+\_\+local\+Matrix} \{\}
+\begin{DoxyCompactList}\small\item\em Matrice di trasformazione locale. \end{DoxyCompactList}\item 
+glm\+::mat4 {\bfseries m\+\_\+global\+Matrix} \{\}
+\begin{DoxyCompactList}\small\item\em Matrice globale nel mondo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+parent} \{\}
+\begin{DoxyCompactList}\small\item\em Puntatore al nodo genitore. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_node}{Node}} $>$ $>$ {\bfseries m\+\_\+children} \{\}
+\begin{DoxyCompactList}\small\item\em Vettore di nodi figli. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+object\+Name} \{\}
+\begin{DoxyCompactList}\small\item\em Nome dell\textquotesingle{}oggetto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Rappresenta una telecamera nel sistema. 
+
+La classe \doxylink{class_camera}{Camera} estende la classe \doxylink{class_node}{Node} e rappresenta una telecamera nel sistema. La telecamera può essere configurata per il movimento dinamico o statico, con la possibilità di spostarsi e ruotare in uno spazio tridimensionale. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_camera_ad0e65086a370b5c433bc863b1f6b681f}\label{class_camera_ad0e65086a370b5c433bc863b1f6b681f} 
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Costruttore della classe \doxylink{class_camera}{Camera}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Il nome della telecamera. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_camera_a915ba8e0b48e0d0b0aca02f22a9410fd}\label{class_camera_a915ba8e0b48e0d0b0aca02f22a9410fd} 
+\index{Camera@{Camera}!getAngleX@{getAngleX}}
+\index{getAngleX@{getAngleX}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getAngleX()}{getAngleX()}}
+{\footnotesize\ttfamily float Camera\+::get\+AngleX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restituisce l\textquotesingle{}angolo X della telecamera. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}angolo X della telecamera. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a6e6b7bb92516b98fda2060bdf28143a3}\label{class_camera_a6e6b7bb92516b98fda2060bdf28143a3} 
+\index{Camera@{Camera}!getAngleY@{getAngleY}}
+\index{getAngleY@{getAngleY}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getAngleY()}{getAngleY()}}
+{\footnotesize\ttfamily float Camera\+::get\+AngleY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restituisce l\textquotesingle{}angolo Y della telecamera. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}angolo Y della telecamera. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a15a5c2a770fc676bf89c189a1311b72a}\label{class_camera_a15a5c2a770fc676bf89c189a1311b72a} 
+\index{Camera@{Camera}!getAngleZ@{getAngleZ}}
+\index{getAngleZ@{getAngleZ}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getAngleZ()}{getAngleZ()}}
+{\footnotesize\ttfamily float Camera\+::get\+AngleZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restituisce l\textquotesingle{}angolo Z della telecamera. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}angolo Z della telecamera. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a7250266b1b1a8de2d754e6d9ccf2e2df}\label{class_camera_a7250266b1b1a8de2d754e6d9ccf2e2df} 
+\index{Camera@{Camera}!getAtX@{getAtX}}
+\index{getAtX@{getAtX}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getAtX()}{getAtX()}}
+{\footnotesize\ttfamily float Camera\+::get\+AtX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restituisce la coordinata X del punto di visuale della telecamera. 
+
+\begin{DoxyReturn}{Returns}
+La coordinata X del punto di visuale della telecamera. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a844a0ec35c073c9c03d4986b412d3135}\label{class_camera_a844a0ec35c073c9c03d4986b412d3135} 
+\index{Camera@{Camera}!getAtY@{getAtY}}
+\index{getAtY@{getAtY}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getAtY()}{getAtY()}}
+{\footnotesize\ttfamily float Camera\+::get\+AtY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restituisce la coordinata Y del punto di visuale della telecamera. 
+
+\begin{DoxyReturn}{Returns}
+La coordinata Y del punto di visuale della telecamera. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a34a4428dd7afb1678c4e54b4ad6534ea}\label{class_camera_a34a4428dd7afb1678c4e54b4ad6534ea} 
+\index{Camera@{Camera}!getCameraInverse@{getCameraInverse}}
+\index{getCameraInverse@{getCameraInverse}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getCameraInverse()}{getCameraInverse()}}
+{\footnotesize\ttfamily glm\+::mat4 Camera\+::get\+Camera\+Inverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Restituisce la matrice inversa della telecamera. 
+
+\begin{DoxyReturn}{Returns}
+La matrice inversa della telecamera. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_acfdfc9d8b5b2ac82108a5c538aca8f83}\label{class_camera_acfdfc9d8b5b2ac82108a5c538aca8f83} 
+\index{Camera@{Camera}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily float Camera\+::get\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restituisce la distanza della telecamera. 
+
+\begin{DoxyReturn}{Returns}
+La distanza della telecamera. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a58dec8a5329f79a5648b9d6703030849}\label{class_camera_a58dec8a5329f79a5648b9d6703030849} 
+\index{Camera@{Camera}!getEyeX@{getEyeX}}
+\index{getEyeX@{getEyeX}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getEyeX()}{getEyeX()}}
+{\footnotesize\ttfamily float Camera\+::get\+EyeX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restituisce la coordinata X dell\textquotesingle{}occhio della telecamera. 
+
+\begin{DoxyReturn}{Returns}
+La coordinata X dell\textquotesingle{}occhio della telecamera. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a842ea2ea9e2ef813e815f847168108aa}\label{class_camera_a842ea2ea9e2ef813e815f847168108aa} 
+\index{Camera@{Camera}!getEyeY@{getEyeY}}
+\index{getEyeY@{getEyeY}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getEyeY()}{getEyeY()}}
+{\footnotesize\ttfamily float Camera\+::get\+EyeY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restituisce la coordinata Y dell\textquotesingle{}occhio della telecamera. 
+
+\begin{DoxyReturn}{Returns}
+La coordinata Y dell\textquotesingle{}occhio della telecamera. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a247977e58bda8e0ebc353fa9f3954c7d}\label{class_camera_a247977e58bda8e0ebc353fa9f3954c7d} 
+\index{Camera@{Camera}!getEyeZ@{getEyeZ}}
+\index{getEyeZ@{getEyeZ}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getEyeZ()}{getEyeZ()}}
+{\footnotesize\ttfamily float Camera\+::get\+EyeZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restituisce la coordinata Z dell\textquotesingle{}occhio della telecamera. 
+
+\begin{DoxyReturn}{Returns}
+La coordinata Z dell\textquotesingle{}occhio della telecamera. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_afdca259a5f12c882f16fc9c06298e38b}\label{class_camera_afdca259a5f12c882f16fc9c06298e38b} 
+\index{Camera@{Camera}!getOrthogonalMatrix@{getOrthogonalMatrix}}
+\index{getOrthogonalMatrix@{getOrthogonalMatrix}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getOrthogonalMatrix()}{getOrthogonalMatrix()}}
+{\footnotesize\ttfamily glm\+::mat4 Camera\+::get\+Orthogonal\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Restituisce la matrice ortografica della telecamera. 
+
+\begin{DoxyReturn}{Returns}
+La matrice ortografica della telecamera. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_adf09522521723786b9f405c99d6594c7}\label{class_camera_adf09522521723786b9f405c99d6594c7} 
+\index{Camera@{Camera}!getProjectionMatrix@{getProjectionMatrix}}
+\index{getProjectionMatrix@{getProjectionMatrix}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getProjectionMatrix()}{getProjectionMatrix()}}
+{\footnotesize\ttfamily glm\+::mat4 Camera\+::get\+Projection\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restituisce la matrice di proiezione della telecamera. 
+
+\begin{DoxyReturn}{Returns}
+La matrice di proiezione della telecamera. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a4786d0ba95b66f3afbfc05480ba364e2}\label{class_camera_a4786d0ba95b66f3afbfc05480ba364e2} 
+\index{Camera@{Camera}!getSpeedMovement@{getSpeedMovement}}
+\index{getSpeedMovement@{getSpeedMovement}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getSpeedMovement()}{getSpeedMovement()}}
+{\footnotesize\ttfamily float Camera\+::get\+Speed\+Movement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restituisce la velocità di movimento della telecamera. 
+
+\begin{DoxyReturn}{Returns}
+La velocità di movimento della telecamera. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a9278e37f18960a72de4b1760cd287dc1}\label{class_camera_a9278e37f18960a72de4b1760cd287dc1} 
+\index{Camera@{Camera}!isDynamic@{isDynamic}}
+\index{isDynamic@{isDynamic}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{isDynamic()}{isDynamic()}}
+{\footnotesize\ttfamily bool Camera\+::is\+Dynamic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Verifica se la telecamera è in modalità dinamica. 
+
+\begin{DoxyReturn}{Returns}
+True se la telecamera è in modalità dinamica, false altrimenti. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a5887327ae96f6868c0d356d53af79fe9}\label{class_camera_a5887327ae96f6868c0d356d53af79fe9} 
+\index{Camera@{Camera}!setOrthogonalMatrix@{setOrthogonalMatrix}}
+\index{setOrthogonalMatrix@{setOrthogonalMatrix}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setOrthogonalMatrix()}{setOrthogonalMatrix()}}
+{\footnotesize\ttfamily void Camera\+::set\+Orthogonal\+Matrix (\begin{DoxyParamCaption}\item[{const glm\+::mat4 \&}]{orthogonal\+Matrix }\end{DoxyParamCaption})}
+
+
+
+Imposta la matrice ortografica della telecamera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orthogonal\+Matrix} & La nuova matrice ortografica. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_ad8df1df9aff27dcc883bfdfc40698a4f}\label{class_camera_ad8df1df9aff27dcc883bfdfc40698a4f} 
+\index{Camera@{Camera}!setProjectionMatrix@{setProjectionMatrix}}
+\index{setProjectionMatrix@{setProjectionMatrix}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setProjectionMatrix()}{setProjectionMatrix()}}
+{\footnotesize\ttfamily glm\+::mat4 Camera\+::set\+Projection\+Matrix (\begin{DoxyParamCaption}\item[{float}]{width,  }\item[{float}]{height }\end{DoxyParamCaption})}
+
+
+
+Imposta la matrice di proiezione della telecamera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & La larghezza della finestra. \\
+\hline
+{\em height} & L\textquotesingle{}altezza della finestra. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La matrice di proiezione della telecamera. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_ac93b8de5039b7eb975be9cae319f7aea}\label{class_camera_ac93b8de5039b7eb975be9cae319f7aea} 
+\index{Camera@{Camera}!setSpeedMovement@{setSpeedMovement}}
+\index{setSpeedMovement@{setSpeedMovement}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setSpeedMovement()}{setSpeedMovement()}}
+{\footnotesize\ttfamily void Camera\+::set\+Speed\+Movement (\begin{DoxyParamCaption}\item[{float}]{speed }\end{DoxyParamCaption})}
+
+
+
+Imposta la velocità di movimento della telecamera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & La velocità di movimento desiderata. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_primary_camera_8h}{Primary\+Camera.\+h}}\item 
+Primary\+Camera.\+cpp\end{DoxyCompactItemize}

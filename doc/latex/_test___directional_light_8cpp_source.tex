@@ -1,0 +1,30 @@
+\doxysection{Test\+\_\+\+Directional\+Light.\+cpp}
+\hypertarget{_test___directional_light_8cpp_source}{}\label{_test___directional_light_8cpp_source}\index{tests/Test\_DirectionalLight.cpp@{tests/Test\_DirectionalLight.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}../DirectionalLight.h"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keywordtype}{void}\ testDirectionalLightMethods()\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{comment}{//\ Creazione\ della\ luce\ direzionale\ di\ test}}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{class_directional_light}{DirectionalLight}}\ directionalLight(\textcolor{stringliteral}{"{}TestDirectionalLight"{}});}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{//\ Verifica\ dell'ID,\ del\ tipo\ e\ del\ nome}}
+\DoxyCodeLine{00011\ \ \ \ \ assert(directionalLight.getID()\ ==\ 1);}
+\DoxyCodeLine{00012\ \ \ \ \ assert(directionalLight.getType()\ ==\ \textcolor{stringliteral}{"{}DirectionalLight"{}});}
+\DoxyCodeLine{00013\ \ \ \ \ assert(directionalLight.getName()\ ==\ \textcolor{stringliteral}{"{}TestDirectionalLight"{}});}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//\ Verifica\ del\ numero\ di\ luce}}
+\DoxyCodeLine{00016\ \ \ \ \ assert(directionalLight.getLightNumber()\ ==\ 0);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ Verifica\ della\ direzione\ della\ luce}}
+\DoxyCodeLine{00019\ \ \ \ \ directionalLight.setDirection(glm::vec3(1.0f,\ 2.0f,\ 3.0f));}
+\DoxyCodeLine{00020\ \ \ \ \ glm::vec3\ direction\ =\ directionalLight.getDirection();}
+\DoxyCodeLine{00021\ \ \ \ \ assert(direction.x\ ==\ 1.0f);}
+\DoxyCodeLine{00022\ \ \ \ \ assert(direction.y\ ==\ 2.0f);}
+\DoxyCodeLine{00023\ \ \ \ \ assert(direction.z\ ==\ 3.0f);}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,135 @@
+\doxysection{Ovo\+Parser.\+h}
+\hypertarget{_ovo_parser_8h_source}{}\label{_ovo_parser_8h_source}\mbox{\hyperlink{_ovo_parser_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ OVOPARSER\_HEADER}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ OVOPARSER\_HEADER}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <filesystem>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <memory>}\ \textcolor{comment}{//\ unique\_ptr}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <glm/glm.hpp>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <glm/gtc/matrix\_transform.hpp>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <glm/gtc/type\_ptr.hpp>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <glm/gtc/packing.hpp>}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_engine_export_8h}{EngineExport.h}}"{}}\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_mesh_8h}{Mesh.h}}"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_material_8h}{Material.h}}"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_node_8h}{Node.h}}"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_light_8h}{Light.h}}"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}SpotLight.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}Enums.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}Texture.h"{}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{class\ }\mbox{\hyperlink{_engine_export_8h_a77278c8cc96e39fb27b5d0a347c8fb3d}{LIB\_API}}\ \mbox{\hyperlink{class_ovo_parser}{OvoParser}}\ \{}
+\DoxyCodeLine{00059\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00061\ \ \ \ \ std::filesystem::path\ m\_directory;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00064\ \ \ \ \ std::vector<std::shared\_ptr<Material>>\ m\_materials;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00067\ \ \ \ \ std::vector<std::shared\_ptr<Texture>>\ m\_textures;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00070\ \ \ \ \ std::unique\_ptr<Node>\ m\_root;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{class_ovo_parser_a5dca2baf3270049c7a734a8cacc63f07}{OvoParser}}(\textcolor{keyword}{const}\ std::filesystem::path\&\ directory)\ :\ m\_directory\{\ directory\ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ parseFile(\textcolor{keyword}{const}\ std::string\&\ fileName);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00094\ \ \ \ \ std::unique\_ptr<Node>\ getRoot();}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00101\ \ \ \ \ std::vector<std::shared\_ptr<Material>>\ getMaterials()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00107\ \ \ \ \ std::vector<std::shared\_ptr<Texture>>\ getTextures()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00124\ \ \ \ \ std::unique\_ptr<Node>\ parseNode(\textcolor{keyword}{const}\ std::vector<char>\&\ buffer,\ std::size\_t\&\ position);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00132\ \ \ \ \ std::vector<char>\ loadFileIntoMemory(std::ifstream\&\ file);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ dispatchChunkParsing(\textcolor{keywordtype}{int}\ chunkId,\ \textcolor{keywordtype}{int}\ chunkSize,\ std::ifstream\&\ input);}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00148\ \ \ \ \ std::pair<int,\ int>\ parseChunkHeader(\textcolor{keyword}{const}\ std::vector<char>\&\ buffer,\ std::size\_t\&\ position);}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ parseVersion(\textcolor{keyword}{const}\ std::vector<char>\&\ buffer,\ std::size\_t\&\ position);}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{void}\ parseMaterial(\textcolor{keyword}{const}\ std::vector<char>\&\ buffer,\ std::size\_t\&\ position);}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{void}\ parseMesh(\textcolor{keyword}{const}\ std::vector<char>\&\ buffer,\ std::size\_t\&\ position,\ \textcolor{keywordtype}{bool}\ isSkinned,\ \mbox{\hyperlink{class_mesh}{Mesh}}*\ mesh);}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keyword}{template}<OvLightSubType\ lightType>}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{void}\ parseLight(\textcolor{keyword}{const}\ std::vector<char>\&\ buffer,\ std::size\_t\&\ position,\ \mbox{\hyperlink{class_light}{Light}}*\ light)\ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Light\ color}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ glm::vec3\ color;}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ std::memcpy(\&color,\ buffer.data()\ +\ position,\ \textcolor{keyword}{sizeof}(glm::vec3));}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ position\ +=\ \textcolor{keyword}{sizeof}(glm::vec3);}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Influence\ radius\ -\/\ Ignored}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{comment}{//float\ radius;}}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::memcpy(\&radius,\ buffer.data()\ +\ position,\ sizeof(float));}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ position\ +=\ \textcolor{keyword}{sizeof}(float);}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Direction}}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ glm::vec3\ direction;}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ std::memcpy(\&direction,\ buffer.data()\ +\ position,\ \textcolor{keyword}{sizeof}(glm::vec3));}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ position\ +=\ \textcolor{keyword}{sizeof}(glm::vec3);}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cutoff\ (only\ for\ SpotLight).\ For\ PointLight,\ hardcoded\ to\ 180°}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ cutoff;}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ std::memcpy(\&cutoff,\ buffer.data()\ +\ position,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ position\ +=\ \textcolor{keyword}{sizeof}(float);}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ exponent;}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ std::memcpy(\&exponent,\ buffer.data()\ +\ position,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ position\ +=\ \textcolor{keyword}{sizeof}(float);}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (lightType\ ==\ OvLightSubType::SPOT)\ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_spot_light}{SpotLight}}*\ spotLight\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_spot_light}{SpotLight}}*\textcolor{keyword}{>}(light);}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ spotLight-\/>\mbox{\hyperlink{class_spot_light_ae5d325db77a23d95fcc060074e1339b0}{setDirection}}(direction);}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ spotLight-\/>\mbox{\hyperlink{class_spot_light_a3ec4c5d5ecc1f4edf18b88aa4038a631}{setLightCutoff}}(cutoff);}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ spotLight-\/>\mbox{\hyperlink{class_spot_light_a127d3a2283db46f1dcfe2f2508456149}{spotExponent}}(exponent);}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ignored}}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{comment}{//bool\ castShadows;}}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::memcpy(\&castShadows,\ buffer.data()\ +\ position,\ sizeof(bool));}}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ position\ +=\ \textcolor{keyword}{sizeof}(bool);}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ignored}}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{comment}{//bool\ isVolumetricLight;}}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::memcpy(\&isVolumetricLight,\ buffer.data()\ +\ position,\ sizeof(bool));}}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ position\ +=\ \textcolor{keyword}{sizeof}(bool);}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ colors}}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ light-\/>\mbox{\hyperlink{class_light_ab78a6fb9a43640f7ae705c221d094af6}{setLightAmbient}}(glm::vec4(glm::vec3(color.x),\ 1.0f));}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ light-\/>\mbox{\hyperlink{class_light_ae9327ffb63102f323f91e4405ae16301}{setLightDiffuse}}(glm::vec4(glm::vec3(color.y),\ 1.0f));}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ light-\/>\mbox{\hyperlink{class_light_ad84bb1d5ad322fc58c8f66afbdc09310}{setLightSpecular}}(glm::vec4(glm::vec3(color.z),\ 1.0f));}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ light-\/>\mbox{\hyperlink{class_light_aef3f7a76f9685584401ffbc0b07d5a20}{setColor}}(color);}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ light-\/>\mbox{\hyperlink{class_light_a5acac48b74deb1386ff3e794d8732f43}{enableLights}}();}
+\DoxyCodeLine{00234\ \ \ \ \ \}}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordtype}{void}\ parseBones(\textcolor{keyword}{const}\ std::vector<char>\&\ buffer,\ std::size\_t\&\ position);}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordtype}{void}\ parseSkinnedMesh(\textcolor{keyword}{const}\ std::vector<char>\&\ buffer,\ std::size\_t\&\ position,\ \textcolor{keyword}{const}\ std::vector<std::uint32\_t>\&\ numOfVerticesPerLOD);}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{keywordtype}{void}\ parsePhysicsProperties(\textcolor{keyword}{const}\ std::vector<char>\&\ buffer,\ std::size\_t\&\ position);}
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00278\ \};}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
